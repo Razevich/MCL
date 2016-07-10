@@ -1,15 +1,34 @@
-class MusicolyServicesController < ApplicationController
+class MusicologyServicesController < ApplicationController
 
   def index
-    @musicology_services = MusicolyServicesController.first
+    @musicology_services = MusicologyServicesController.first
   end
+
+  #Create this right in the data base to start? then delete this file
+  #If not, uncomment and add routes.
+
+  # def new
+  # end
+  #
+  # def create
+  #   @musicology_services = MusicologyServices.new(services_params)
+  #   if @musicology_services.save
+  #     redirect_to musicology_services_path
+  #   else
+  #     render "new"
+  #   end
+  # end
 
 
   def edit
-    @musicolgy_services = MusicolyServicesController.first
-    @musicolgy_services.update(services_params)
+    @musicology_services = MusicologyServicesController.first
+  end
 
-    redirect_to musicolgy_services_path
+  def update
+    @musicology_services = MusicologyServicesController.first
+    @musicology_services.update(services_params)
+
+    redirect_to musicology_services_path
   end
 
   private
