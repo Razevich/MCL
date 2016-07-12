@@ -1,11 +1,10 @@
-class CreateTvs < ActiveRecord::Migration
+class CreateFavorites < ActiveRecord::Migration
   def change
-    create_table :tvs do |t|
+    create_table :favorites do |t|
       t.integer  :year
       t.text     :title
       t.text     :description
       t.text     :img_url
-      t.boolean  :favorite, default: false
 
       t.timestamps null: false
     end

@@ -33,10 +33,10 @@ Rails.application.routes.draw do
 
   get "independent_films", to: "independent_films#index"
   get "independent_films/:title",  to: "independent_films#show"
-  get "independent_films/new", to: "independent_films#new", as: "new_film"
+  get "independent_films/new", to: "independent_films#new", as: "new_indie_film"
   post "independent_films", to: "independent_films#create"
   get "independent_films/:title/edit", to: "independent_films#edit"
-  put "independent_films/:title", to: "independent_films#update", as: "update_film"
+  put "independent_films/:title", to: "independent_films#update", as: "update_indie_film"
   delete "independent_films/:title", to: "independent_films#delete"
 
   get "tv", to: "tv#index"

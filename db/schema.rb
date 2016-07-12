@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426035926) do
+ActiveRecord::Schema.define(version: 20160712053633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,20 @@ ActiveRecord::Schema.define(version: 20160426035926) do
   end
 
   create_table "clients", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "img_url"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "year"
+    t.text     "title"
+    t.text     "description"
+    t.text     "img_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "films", force: :cascade do |t|
@@ -34,8 +46,19 @@ ActiveRecord::Schema.define(version: 20160426035926) do
     t.integer  "year"
     t.text     "description"
     t.text     "img_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "favorite",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "independednt_films", force: :cascade do |t|
+    t.text     "title"
+    t.integer  "year"
+    t.text     "description"
+    t.text     "img_url"
+    t.boolean  "favorite",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "marketings", force: :cascade do |t|
@@ -43,11 +66,13 @@ ActiveRecord::Schema.define(version: 20160426035926) do
     t.text     "title"
     t.text     "description"
     t.text     "img_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "favorite",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "musicolgy_services", force: :cascade do |t|
+    t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,8 +83,9 @@ ActiveRecord::Schema.define(version: 20160426035926) do
     t.string   "img_url"
     t.integer  "year"
     t.integer  "eppisode_count"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.boolean  "favorite",       default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "staffs", force: :cascade do |t|
@@ -72,11 +98,13 @@ ActiveRecord::Schema.define(version: 20160426035926) do
   end
 
   create_table "tvs", force: :cascade do |t|
+    t.integer  "year"
     t.text     "title"
     t.text     "description"
     t.text     "img_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "favorite",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
