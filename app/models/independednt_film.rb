@@ -1,4 +1,4 @@
-class Marketing < ActiveRecord::Base
+class IndependedntFilm < ActiveRecord::Base
 
   def return_favorites
     array = []
@@ -9,5 +9,5 @@ class Marketing < ActiveRecord::Base
     end
     return array
   end
-  
+
 end

@@ -39,6 +39,6 @@ class TvController < ApplicationController
   private
 
   def tv_params
-    params.require(:tv).permit(:title, :description, :img_url)
+    params.require(:tv).permit(:title, :description, :img_url, :favorite)
   end
 end

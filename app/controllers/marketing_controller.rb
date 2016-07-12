@@ -42,6 +42,6 @@ class MarketingController < ApplicationController
     private
 
     def marketing_params
-      params.require(:marketing).permit(:year, :title, :description, :img_url)
+      params.require(:marketing).permit(:year, :title, :description, :img_url. :favorite)
     end
 end

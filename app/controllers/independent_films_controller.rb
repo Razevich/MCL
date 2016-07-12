@@ -1,10 +1,9 @@
-class FilmsController < ApplicationController
-
+class IndependentFilmsController < ApplicationController
   def new
   end
 
   def create
-    @film = Film.new(film_params)
+    @film = Film.new(indie_film_params)
     if @film.save
       redirect_to film_path
     else
@@ -26,7 +25,7 @@ class FilmsController < ApplicationController
 
   def update
     @film= Film.find_by(title: params[:title])
-    @film.update(film_params)
+    @film.update(indie_film_params)
 
     redirect_to film_path(@film)
   end
@@ -40,8 +39,7 @@ class FilmsController < ApplicationController
 
   private
 
-  def film_param
+  def indie_film_param
     params.require(:film).permit(:title, :year, :description, :img_url, :favorite)
   end
-
 end

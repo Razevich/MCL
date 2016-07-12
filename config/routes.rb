@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root "home#index"
 
+  get "projects", to: "projects#index"
+
   get "staff", to: "staff#index"
   post "staff", to: "staff#create"
   get "staff/new", to: "staff#new", as: "new_staff"
@@ -28,6 +30,14 @@ Rails.application.routes.draw do
   get "films/:title/edit", to: "films#edit"
   put "films/:title", to: "films#update", as: "update_film"
   delete "films/:title", to: "films#delete"
+
+  get "independent_films", to: "independent_films#index"
+  get "independent_films/:title",  to: "independent_films#show"
+  get "independent_films/new", to: "independent_films#new", as: "new_film"
+  post "independent_films", to: "independent_films#create"
+  get "independent_films/:title/edit", to: "independent_films#edit"
+  put "independent_films/:title", to: "independent_films#update", as: "update_film"
+  delete "independent_films/:title", to: "independent_films#delete"
 
   get "tv", to: "tv#index"
   get "tv/:title",  to: "tv#show"

@@ -1,8 +1,8 @@
-class CreateMarketings < ActiveRecord::Migration
+class CreateIndependedntFilms < ActiveRecord::Migration
   def change
-    create_table :marketings do |t|
-      t.integer  :year
+    create_table :independednt_films do |t|
       t.text     :title
+      t.integer  :year
       t.text     :description
       t.text     :img_url
       t.boolean  :favorite, default: false

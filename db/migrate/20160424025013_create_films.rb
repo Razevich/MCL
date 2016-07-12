@@ -5,6 +5,7 @@ class CreateFilms < ActiveRecord::Migration
       t.integer  :year
       t.text     :description
       t.text     :img_url
+      t.boolean  :favorite, default: false
 
 
       t.timestamps null: false

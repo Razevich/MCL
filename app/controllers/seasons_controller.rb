@@ -42,7 +42,7 @@ class SeasonsController < ApplicationController
   private
 
   def season_params
-    params.require(:seasons).permit(:title, :img_url, :year, :eppisode_count)
+    params.require(:seasons).permit(:title, :img_url, :year, :eppisode_count, :favorite)
   end
 
 end

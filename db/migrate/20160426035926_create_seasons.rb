@@ -6,6 +6,7 @@ class CreateSeasons < ActiveRecord::Migration
       t.string  :img_url
       t.integer :year
       t.integer :eppisode_count
+      t.boolean  :favorite, default: false
 
       t.timestamps null: false
     end

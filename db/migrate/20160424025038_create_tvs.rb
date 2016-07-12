@@ -4,6 +4,7 @@ class CreateTvs < ActiveRecord::Migration
       t.text     :title
       t.text     :description
       t.text     :img_url
+      t.boolean  :favorite, default: false
 
       t.timestamps null: false
     end
