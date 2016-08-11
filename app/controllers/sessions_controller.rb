@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @admin = Admin.find_by_email(params[:session][:email])
+    @admin = Admin.find_by_username(params[:session][:username)
     if @admin && @admin.authenticate(params[:session][:password])
       session[:admin_id] = @admin.id
     else

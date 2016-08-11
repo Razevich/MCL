@@ -22,10 +22,11 @@ class Film < ActiveRecord::Base
     elsif
       self.favorite == true && self.favorite_changed? == false
       favorite = Favorite.find_by(title: self.title)
-                  favorite.update(title: self.title,
-                                   year: self.year,
-                            description: self.description,
-                                img_url: self.img_url)
+
+      favorite.update(title: self.title,
+                        year: self.year,
+                description: self.description,
+                    img_url: self.img_url)
     end
   end
 
