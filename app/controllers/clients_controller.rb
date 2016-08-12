@@ -1,7 +1,7 @@
 class ClientsController < ApplicationController
 
     def index
-      @clients = Clinet.all
+      @clients = Client.all
     end
 
 
