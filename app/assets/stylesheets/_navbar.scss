@@ -1,7 +1,10 @@
 @import "_variables";
 
  .nav .active {
-  background-color: teal;
+    color: $primary;
+    @extend .z-depth-4 !optional;
+    font-weight: 600;
+    background-image: $lt-texture;
 }
 
 nav {
@@ -119,7 +122,7 @@ nav {
       font-size: $navbar-font-size;
       color: $navbar-font-color;
       display: block;
-      padding: 0 15px;
+      padding: 0px 20px;
       cursor: pointer;
 
       &.btn, &.btn-large, &.btn-flat, &.btn-floating {

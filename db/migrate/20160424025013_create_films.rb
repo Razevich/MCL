@@ -12,3 +12,8 @@ class CreateFilms < ActiveRecord::Migration
     end
   end
 end
+
+# rails generate model film title:string year:integer description:string img_url:string
+
+# `rails generate scaffold film title:string year:integer description:string img_url:string favorite:boolean`
+# film title:string year:integer description:string img_url:string

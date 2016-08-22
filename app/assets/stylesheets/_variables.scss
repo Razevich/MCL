@@ -47,7 +47,7 @@ $link-color: color("light-blue", "darken-1") !default;
 
 // Colors
 $primary: #EC5827;
-$secondary: #555555;
+$secondary: #FF9C36;
 $white: #FFFFFF;
 $black: #000000;
 
@@ -74,6 +74,7 @@ $button-font-size: 1.3rem !default;
 $button-height: 36px !default;
 $button-padding: 0 2rem !default;
 $button-radius: 2px !default;
+// $button-text: $h6
 
 // Disabled styles
 $button-disabled-background: #DFDFDF !default;
@@ -163,7 +164,7 @@ $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
+$input-focus-color: $primary !default;
 $input-font-size: 1rem !default;
 $input-margin: 0 0 20px 0 !default;
 $input-padding: 0 !default;
@@ -289,13 +290,14 @@ $toast-text-color: #fff !default;
 
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
-$h1-fontsize: 2.5rem !default;
-$h2-fontsize: 2rem !default;
-$h3-fontsize: 1.5rem !default;
-$h4-fontsize: 1.25rem !default;
+$h1-fontsize: 2rem !default;
+$h2-fontsize: 1.5rem !default;
+$h3-fontsize: 1.25rem !default;
+$h4-fontsize: 1rem !default;
 $h5-fontsize: 1em !default;
 $h6-fontsize: 0.75 !default;
 
+$p-fontsize: 18px !default;
 
 /* 21. Footer
    ========================================================================== */

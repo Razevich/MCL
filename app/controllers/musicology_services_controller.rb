@@ -7,17 +7,17 @@ class MusicologyServicesController < ApplicationController
   #Create this right in the data base to start? then delete this file
   #If not, uncomment and add routes.
 
-  # def new
-  # end
-  #
-  # def create
-  #   @musicology_services = MusicologyServices.new(services_params)
-  #   if @musicology_services.save
-  #     redirect_to musicology_services_path
-  #   else
-  #     render "new"
-  #   end
-  # end
+    # def new
+    # end
+    #
+    # def create
+    #   @musicology_services = MusicologyServices.new(services_params)
+    #   if @musicology_services.save
+    #     redirect_to musicology_services_path
+    #   else
+    #     render "new"
+    #   end
+    # end
 
 
   def edit

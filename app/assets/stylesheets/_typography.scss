@@ -3,6 +3,11 @@
 
 a {
   text-decoration: none;
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
+  }
 }
 
 html{
@@ -31,25 +36,64 @@ h1, h2, h3, h4, h5, h6 {
 
 // Header Styles
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit;}
-h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 4) 0 ($h1-fontsize / 4) 0; color: $primary; text-align: center;}
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: 0 0 ($h1-fontsize / 4) 0; color: $primary; text-align: center; }
 h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 4) 0 ($h2-fontsize / 4) 0; color: lighten($black, 50%);   text-align: center;}
-h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 1) 0 ($h3-fontsize / 5) 0; color: $primary;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 1) 0 ($h3-fontsize / 5) 0; color: $primary; font-weight: 700; padding-top: 10px;}
 h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0; color: lighten($black, 50%);}
-h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0; color: lighten($black, 50%);}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0; color: $primary; font-weight: 700; }
 h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0; color: lighten($black, 50%);}
 
 // Text Styles
 em { font-style: italic; }
-strong { font-weight: 500; }
+strong { font-weight: 700; }
 small { font-size: 75%; }
 .light { font-weight: 300; }
 .thin { font-weight: 200; }
 
-p.home {
+p {
   color: lighten($black, 50%);
+  font-weight: 300;
+  line-height: 160%;
+  font-size: $p-fontsize;
+  padding-bottom: 10px;
+}
+
+.divider {
+  border-top: 1pt solid $primary;
+  margin: 20px;
+}
+
+.notice {
+  color: $primary;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
+  // padding-bottom: 5px;
+
+}
+
+span.client_name {
+  font-size: $h1-fontsize;
+  padding: 10px 10px 10px 0;
+  color: lighten($black, 50%);
+  text-align: center; 
   font-weight: 200;
 }
 
+span.subtitle {
+  font-size: $h4-fontsize;
+  padding: 10px 10px 20px 0;
+  color: lighten($black, 70%);
+  text-align: center;  // float: right;
+}
+
+span.year {
+  font-size: $h2-fontsize;
+  padding: 10px 10px 20px 0;
+  color: lighten($black, 70%);
+  // text-align: center;  
+  // float: right;
+}
 
 .flow-text{
   font-weight: 300;
@@ -60,6 +104,8 @@ p.home {
     }
     $i: $i + 1;
   }
+
+  
 
   // Handle below 360px screen
   @media only screen and (max-width: 360px) {

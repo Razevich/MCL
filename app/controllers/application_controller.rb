@@ -7,3 +7,5 @@ class ApplicationController < ActionController::Base
     @current_admin ||= Admin.find_by_id(session[:admin_id]) if session[:admin_id]
   end
 end
+
+

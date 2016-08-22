@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712053633) do
+ActiveRecord::Schema.define(version: 20160817201504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20160712053633) do
     t.text     "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "client2s", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "image_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "clients", force: :cascade do |t|
@@ -76,6 +84,18 @@ ActiveRecord::Schema.define(version: 20160712053633) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.integer  "film_id"
+    t.integer  "tv_id"
+    t.integer  "marketing_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "projects", ["film_id"], name: "index_projects_on_film_id", using: :btree
+  add_index "projects", ["marketing_id"], name: "index_projects_on_marketing_id", using: :btree
+  add_index "projects", ["tv_id"], name: "index_projects_on_tv_id", using: :btree
+
   create_table "seasons", force: :cascade do |t|
     t.integer  "tv_id"
     t.string   "title"
@@ -106,4 +126,7 @@ ActiveRecord::Schema.define(version: 20160712053633) do
     t.datetime "updated_at",                  null: false
   end
 
+  add_foreign_key "projects", "films"
+  add_foreign_key "projects", "marketings"
+  add_foreign_key "projects", "tvs"
 end

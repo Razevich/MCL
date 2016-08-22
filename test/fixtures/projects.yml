@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  film_id: 
+  tv_id: 
+  marketing_id: 
+  independent_Film_id: 
+
+two:
+  film_id: 
+  tv_id: 
+  marketing_id: 
+  independent_Film_id: 
