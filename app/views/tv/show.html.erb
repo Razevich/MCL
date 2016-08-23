@@ -1,1 +1,29 @@
-show.html.erb
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @tv.year %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tv.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tv.description %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @tv.img_url %>
+</p>
+
+<p>
+  <strong>Favorite:</strong>
+  <%= @tv.favorite %>
+</p>
+
+<%= link_to 'Edit', edit_tv_path(@tv) %> |
+<%= link_to 'Back', tvs_path %>

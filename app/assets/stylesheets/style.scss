@@ -1,0 +1,145 @@
+@import "compass";
+@import "compass/layout";
+
+@import "media.scss";
+@import "mixins.scss";
+@import "variables.scss";
+
+body {
+  // background-image: $lt-texture;
+  background-color: $primary;
+  margin: 0px;
+      display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main_primary {
+  background-color: $primary;
+  padding: 0 5%;
+  flex: 1 0 auto;
+}
+
+.main_background {
+  background-image: $lt-texture;
+  padding: 10px;
+}
+.bar {
+	// background-color: $primary;
+	background-image: $lt-texture;
+	height: 10px;
+}
+
+// images
+.responsive-logo {
+    max-width: 25%;
+    padding: 10px 25px;
+    vertical-align: center;
+    // max-height: 60px;
+    /*width: 60%;*/
+    min-width: 250px;
+    float: left;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+
+// home & admin
+.modal_box {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+.tagline  {
+  background-image: $lt-texture;
+  padding: 10px;
+}
+
+.main {
+  background-image: $base-texture;
+  padding: 0 15%;
+  flex: 1 0 auto;
+}
+
+// client
+.admin_options {
+  color: $black;
+  // background-color: gray;
+  // padding: 20px;
+}
+
+.row {
+  padding: 0 20px;
+}
+
+.client_row {
+  margin: auto;
+  padding: 20px;
+}
+
+.client_logo {
+  max-width: 200px;
+}
+
+.poster_thumb {
+  max-height: 200px;
+  z-index: 2;
+}
+
+.poster {
+  max-height: 400px;
+  float: left;
+  padding-right: 20px;
+  margin: auto;
+}
+.poster_index {
+  padding: 20px 20px 0 20px;
+}
+
+
+
+.project_frame {
+  // border: 1pt solid $primary;
+  background-image: $base-texture;
+  // padding: 20px;
+  // margin: 2% 10%;
+  // min-height: 440px;
+  border-radius: 10px;
+}
+
+.film_frame {
+  border: 1pt solid $primary;
+  background-color: $white;
+  padding: 20px;
+  margin: 2% 10%;
+  min-height: 440px;
+  border-radius: 10px;
+}
+
+.show_poster {
+
+}
+
+.film_card {
+  border: 1pt solid red;
+  margin: 10px;
+  border-radius: 40px;
+  background-image: $base-texture;
+}
+
+.admin_box {
+  padding: 10px;
+  text-align: center;
+}
+
+
+

@@ -2,13 +2,56 @@
 <html>
 <head>
   <title>MCL</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<header>
+<div class="bar"></div>
+  <div class="navbar">
+    <nav>
+      <div class="nav-wrapper">
+      <%= link_to image_tag("MCL-Logo-Orange-RGB.png", :class => 'brand-logo'), {action: :'index', :controller => 'home'} %>
+      <!-- <a href="#" class="button-collapse"><span class="fa fa arrow"/></a> -->
+      
+      <ul class="right hide-on-med-and-down">
 
+        <!-- <li class="nav"><a href="/"><span class="fa fa-home"></span> Home</a></li> -->
+        <li class="nav"></span> <%= active_link_to "Home", home_index_path %>
+
+        </li>
+
+        <li class="nav"><%= active_link_to "Services", home_services_path %></li>
+        <li class="nav"><%= active_link_to "Clients", clients_path %></li>
+        <li class="nav"><%= active_link_to "Projects", projects_path %></li>
+        <li class="nav"><%= active_link_to "Staff", staff_path %></li>
+        <li class="nav"><%= active_link_to "Musicology", musicology_services_path %></li>
+        <li class="nav"><%= active_link_to "Contact", contacts_path %></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="bar"></div>
+  </header>
+  
+<%= yield %>
+<footer>
+  <ul>
+    <% if @admin %>
+    <a id="login-form" class="modal waves-effect waves-light btn modal-trigger" href="/logout"><span class="fa fa-unlock"></span></a>
+    <li><%= link_to "Sign out", logout_path, method: "delete", class: "center" %></li>
+    <% else %>
+      <li><a class="waves-effect waves-light btn modal-trigger right" href="/login"><span class="fa fa-lock"></span></a></li>
+    <% end %>
+  </ul>
+</footer>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </body>
 </html>
