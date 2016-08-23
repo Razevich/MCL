@@ -40,21 +40,25 @@ class FilmsController < ApplicationController
   end
 
 
+  # def update
+  #   @film = Film.find_by(title: params[:title])
+
+  #   @film.update(film_params)
+  #   respond_to do |format|
+  #     if @film.update(film_params)
+  #       format.html { redirect_to @film, notice: 'Film was successfully updated.' }
+  #     else
+  #       format.html { render :edit }
+  #     end
+  #   end
+  # end
+
   def update
-    @film = Film.find_by(title: params[:title])
+    @film= Film.find_by(title: params[:title])
+    @film.update(film_params)
 
-    # @film.update(film_params)
-    respond_to do |format|
-      if @film.update(film_params)
-        format.html { redirect_to @film, notice: 'Film was successfully updated.' }
-        # format.json { render :show, status: :ok, location: @film }
-      else
-        format.html { render :edit }
-        # format.json { render json: @film.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to film_path(@film)
   end
-
 
     def destroy
       @film.destroy
@@ -64,12 +68,6 @@ class FilmsController < ApplicationController
       end
       @film = Film.find_by(title: params[:title])
     end
-  # def update
-  #   @film= Film.find_by(title: params[:title])
-  #   @film.update(film_params)
-
-  #   redirect_to film_path(@film)
-  # end
 
   # def destroy
   #   @film= Film.find_by(title: params[:title])

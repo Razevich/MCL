@@ -23,12 +23,12 @@
       	</div>
       <% end %>
     </div>
+  </div>
 
     <div class="admin_box">
-      <% if @admin %>
+      <% if !@admin %>
         <%= link_to 'New Film', new_film_path, :class => "waves-effect waves-light btn valign" %>
       <% end %>
     </div>
 
-  </div>
 </div>
