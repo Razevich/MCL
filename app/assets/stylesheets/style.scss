@@ -55,6 +55,12 @@ body {
   margin-bottom: 0;
 }
 
+.staff_img {
+  max-width: 200px;
+  float: left;
+  padding-right: 20px;
+  margin: 10px;
+}
 
 // home & admin
 .modal_box {
@@ -111,7 +117,13 @@ body {
   padding: 20px 20px 0 20px;
 }
 
+.staff_frame {
+  background-image: $base-texture;
+  border-radius: 10px;
+  margin: 2% 10%;
+  padding: 10px;
 
+}
 
 .project_frame {
   // border: 1pt solid $primary;

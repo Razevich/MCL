@@ -1,5 +1,12 @@
-<div class="main">
+<div class="main_background">
+
 	<% @staff.each do |staff| %>
-	  <%= staff.name %>
+<div class="staff_frame">
+	 <%= image_tag(staff.img_url, :class => "staff_img") %>
+	 <h1 class="staff"><%= staff.name %></h1>
+	 <h3><%= staff.title %></h3>
+	 <p><%= staff.bio %></p>
+	 <!-- <div class="divider"></div> -->
+</div>
 	<% end %>
 </div>
