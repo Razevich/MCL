@@ -6,17 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-# admins = Admin.create([ {username: "admin"}, {password: "1234"} ])
-# Admin.create(:username => 'admin', :password => '123')
-
-
-# films = Film.create([ {title: "sample"}, {year: 1999}, {description: "blah"} ])
 
 # rails g scaffold Tv year:integer title:text description:text img_url:text favorite:boolean
 
 
-# staff seeds
-
+# staff information
 staff_list = [ 
 	["Owner and Founder", "MATT LILLEY", "Matt Lilley created MCL Music Services in 2009 to provide Music Clearance, Licensing, and Supervision services to the Film, Television, and Advertising communities. Previously the Director of Music Clearance in the Feature Film division at Paramount Pictures from 1996 - 2008, Matt was responsible for much of the clearance negotiating and licensing in many of Paramount’s most successful films and soundtracks over that span of time. 
 
