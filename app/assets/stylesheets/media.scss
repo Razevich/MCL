@@ -60,28 +60,6 @@
 
 
 
-/* = Nav Media Queries
--------------------------------------------------------------- */
-@media all and (max-width: 900px) {
-  #nav-trigger {
-    display: block; 
-  }
-
-  nav#nav-main {
-    display: none; 
-  }
-
-  nav#nav-mobile {
-    display: block; 
-  } 
-}
-// ------------------
-
-
-
-
-
-
 
 
 
@@ -179,62 +157,62 @@ body {
   @include transition(0.4s);
 }
 
-@media (max-width: 850px) {
-  .page-wrap {
-    width: 98%;
-  }
-}
-@media (max-width: 700px) {
-  .search {
-    left: 66.66%;
-    top: 80px;
-    width: 33.33%;
-  }
-  .logo {
-    width: 33.33%;
-  }
-  .nav {
-    width: 66.66%;
-  }
-  .main-content--articles {
-    width: 66.66%;
-  } 
-  .main-content--sidebar {
-    width: 33.33%;
-    padding-top: 80px
-  }
-  .module {
-    margin-top: 1rem;
-  }
-}
-@media (max-width: 550px) {
-  .page-wrap {
-    padding: 1rem;
-  }
-  .logo {
-    width: 100%;
-  }
-  .nav {
-    width: 100%;
-    height: 50px;
-  }
-  .search {
-    left: 0;
-    width: 100%;
-    top: 130px;
-    height: 70px;
-  }
-  .main-content {
-    padding-top: 70px;
-  }
-  .main-content--articles {
-    width: 100%;
-  }
-  .main-content--sidebar {
-    padding-top: 0;
-    width: 100%;
-  }
-}
+// @media (max-width: 850px) {
+//   .page-wrap {
+//     width: 98%;
+//   }
+// }
+// @media (max-width: 700px) {
+//   .search {
+//     left: 66.66%;
+//     top: 80px;
+//     width: 33.33%;
+//   }
+//   .logo {
+//     width: 33.33%;
+//   }
+//   .nav {
+//     width: 66.66%;
+//   }
+//   .main-content--articles {
+//     width: 66.66%;
+//   } 
+//   .main-content--sidebar {
+//     width: 33.33%;
+//     padding-top: 80px
+//   }
+//   .module {
+//     margin-top: 1rem;
+//   }
+// }
+// @media (max-width: 550px) {
+//   .page-wrap {
+//     padding: 1rem;
+//   }
+//   .logo {
+//     width: 100%;
+//   }
+//   .nav {
+//     width: 100%;
+//     height: 50px;
+//   }
+//   .search {
+//     left: 0;
+//     width: 100%;
+//     top: 130px;
+//     height: 70px;
+//   }
+//   .main-content {
+//     padding-top: 70px;
+//   }
+//   .main-content--articles {
+//     width: 100%;
+//   }
+//   .main-content--sidebar {
+//     padding-top: 0;
+//     width: 100%;
+//   }
+// }
 
 .note {
   text-align: center;

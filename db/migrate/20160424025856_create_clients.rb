@@ -9,3 +9,4 @@ class CreateClients < ActiveRecord::Migration
     end
   end
 end
+

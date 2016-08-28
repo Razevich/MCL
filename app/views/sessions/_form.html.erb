@@ -1,7 +1,7 @@
 <div class="errors">
-  <% if flash[:danger] %>
-    <i class="material-icons prefix">info</i>
-    <%= flash[:danger] %>
+  <% if flash[:alert] %>
+    <!-- <i class="material-icons prefix">info</i> -->
+    <%= flash[:alert] %>
   <% end %>
 </div>
 
@@ -17,7 +17,7 @@
       <%= f.password_field :password %>
     </div>
     <div class="actions">
-      <%= f.submit "Login", class: :"waves-effect btn" %>
+      <%= f.submit "Login", class: :"btn" %>
     </div>
   <% end %>
 </div>

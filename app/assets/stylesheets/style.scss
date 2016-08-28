@@ -82,16 +82,7 @@ body {
   flex: 1 0 auto;
 }
 
-// client
-.admin_options {
-  color: $black;
-  // background-color: gray;
-  // padding: 20px;
-}
 
-// .row {
-//   padding: 0 20px;
-// }
 
 .client_row {
   margin: auto;
@@ -127,11 +118,12 @@ body {
 
 .project_frame {
   // border: 1pt solid $primary;
-  background-image: $base-texture;
-  // padding: 20px;
+  background-image: $lt-texture;
+  padding: 20px;
   // margin: 2% 10%;
   // min-height: 440px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .film_frame {
@@ -155,10 +147,14 @@ body {
 }
 
 .admin_box {
-  padding: 10px;
+  padding: 5px 0 10px 0;
   text-align: center;
 }
 
+.admin_options {
+  color: $black;
+  text-align: center;
+}
 
 .map {
   float: right;
@@ -168,4 +164,15 @@ body {
 
 .no_margin {
   margin:0px;
+}
+
+.parallax{
+  position:static;
+}
+
+.clear {
+  clear: none;
+  @media #{$medium-and-down} {
+  clear: both;
+  }
 }

@@ -5,7 +5,7 @@ class StaffController < ApplicationController
   end
 
   def new
-
+    @staff = Staff.new
   end
 
   def create
@@ -19,6 +19,7 @@ class StaffController < ApplicationController
 
   def edit
     @staff = Staff.find_by(name: params[:name])
+    redirect_to staff_path
   end
 
   def update

@@ -25,9 +25,7 @@
     <div class="field">
       <%= f.label :description %><br>
     <textarea id="film[description]" class="materialize-textarea">
-     <%= @film.description%></textarea>
-
-<!--   <textarea name="film[description]" id="film_description"> -->
+     <%= (@film.description)%></textarea>
     </div>
     <div class="field">
       <%= f.label :img_url %><br>
@@ -43,5 +41,3 @@
     </div>
   </div>
 <% end %>
-<!-- <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Textarea</label> -->
