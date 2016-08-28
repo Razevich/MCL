@@ -1,6 +1,4 @@
 class Film < ActiveRecord::Base
-  belongs_to :projects
-
   after_save :check_for_and_create_favorite
 
   def change_favorite

@@ -1,6 +1,7 @@
 @import "_variables";
 
- .nav .active {
+
+.nav .active {
     color: $primary;
     @extend .z-depth-4 !optional;
     font-weight: 600;
@@ -9,47 +10,12 @@
 
 nav {
   color: $primary;
-  @extend .z-depth-1 !optional;
+  // @extend .z-depth-1 !optional;
   background-color: $white;
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-height-mobile;
-
   a { color: $navbar-font-color; }
-
- 
-  i.font-awesome  {
-    display: block;
-    font-size: 2rem;
-    height: $navbar-height-mobile;
-    line-height: $navbar-height-mobile;
-  }
-
-  .nav-wrapper {
-    position: relative;
-    height: 100%;
-  }
-
-  
-
-  @media #{$large-and-up} {
-    a.button-collapse { display: none; }
-  }
-
-
-  // Collapse button
-  .button-collapse {
-    float: left;
-    position: relative;
-    z-index: 1;
-    height: $navbar-height-mobile;
-
-    i {
-      font-size: 2.7rem;
-      height: $navbar-height-mobile;
-      line-height: $navbar-height-mobile;
-    }
-  }
 
 
   // Logo
@@ -67,15 +33,46 @@ nav {
     /*width: 60%;*/
     min-width: 250px;
     float: left;
+    margin-right: 250px;
 
     &.center {
       left: 50%;
       transform: translateX(-50%);
     }
 
-    @media #{$medium-and-down} {
+
+    @media #{$medium-only} {
       left: 50%;
       transform: translateX(-50%);
+      min-width: 250px;
+      margin-right: 0px;
+      border: 0;
+      margin-right: 100px;
+
+
+      &.left, &.right {
+        padding: 0;
+        transform: none;
+      }
+
+      &.left { left: 0.5rem; }
+      &.right {
+        right: 0.5rem;
+        left: auto;
+      }
+    }
+
+    &.right {
+      right: 0.5rem;
+      padding: 0;
+    }
+    @media #{$small-and-down} {
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 150px;
+      margin-right: 0px;
+      border: 0;
+
 
       &.left, &.right {
         padding: 0;
@@ -94,12 +91,6 @@ nav {
       padding: 0;
     }
 
-    i,
-    [class^="mdi-"], [class*="mdi-"],
-    i.material-icons {
-      float: left;
-      margin-right: 15px;
-    }
   }
 
 
@@ -125,11 +116,11 @@ nav {
       padding: 0px 20px;
       cursor: pointer;
 
-      &.btn, &.btn-large, &.btn-flat, &.btn-floating {
-        margin-top: -2px;
-        margin-left: 15px;
-        margin-right: 15px;
-      }
+      // &.btn, &.btn-large, &.btn-flat, &.btn-floating {
+      //   margin-top: -2px;
+      //   margin-left: 15px;
+      //   margin-right: 15px;
+      // }
 
       &:hover, &:active {
         color: $primary;
@@ -181,15 +172,15 @@ nav {
 }
 
 // Fixed Navbar
-.navbar-fixed {
-  position: relative;
-  height: $navbar-height-mobile;
-  z-index: 998;
+// .navbar-fixed {
+//   position: relative;
+//   height: $navbar-height-mobile;
+//   z-index: 998;
 
-  nav {
-    position: fixed;
-  }
-}
+//   nav {
+//     position: fixed;
+//   }
+// }
 @media #{$medium-and-up} {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: $navbar-height;
@@ -199,3 +190,119 @@ nav {
     height: $navbar-height;
   }
 }
+
+
+
+#nav-trigger {
+  display:none;
+  span {
+    display:inline-block;
+    padding: 0 30px;
+    background-color:$white;
+    color:$color;
+    cursor:pointer;
+    text-transform: uppercase;
+    &:after {
+      display:inline-block;
+      margin-left:10px;
+      width:20px;
+      height:10px;
+      content:"";
+      border-left:solid 10px transparent;
+      border-top:solid 10px $primary;
+      border-right:solid 10px transparent;
+    }
+    &:hover {
+      color:$color;
+      // background-color:darken($color, 5%);
+    }
+    &.open:after {
+      border-left:solid 10px transparent;
+      border-top:none;
+      border-bottom:solid 10px $primary;
+      border-right:solid 10px transparent;
+    }
+  }
+}
+
+
+nav#nav-mobile {
+  // position:relative;
+  display:none;
+  ul {
+    display:none;
+    list-style-type:none;
+    position:absolute;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+    text-align:center;
+    background-color:$color;
+  }
+  li {
+    display:block;
+    padding:5px 0;
+    margin:0 5px;
+  }
+  a {
+    display:block;
+    color:rgb(255,255,255);
+    padding:10px 30px;
+    &:hover {
+      background-image: $lt-texture;
+    //   color:#fff;
+    }
+  }
+}
+
+div#nav-trigger {
+    text-align: right;
+    // color: $primary;
+}
+// nav {
+//   width: 100%;
+// }
+
+
+span.login {
+  color: $primary;
+}
+
+/* =Sections
+-------------------------------------------------------------- */
+section {
+  
+}
+section h1 {
+  margin-bottom:10px;
+}
+section p {
+  margin-bottom:30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 900px) {
+  
+  #nav-trigger {
+    display:block;
+  }
+  nav#nav-main {
+    display:none;
+  }
+  nav#nav-mobile {
+    display: block;
+  }
+
+}
+
+
+
+

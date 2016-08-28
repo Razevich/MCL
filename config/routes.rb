@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :staffs
   get 'home/index'
   root "home#index"
   get 'home/services'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   resources :contacts
   resources :clients
   resources :films
+  # resources :staff
   # resources :projects
 
   # namespace :projects do
@@ -16,12 +18,12 @@ Rails.application.routes.draw do
 
   get "projects", to: "projects#index"
 
-  get "staff", to: "staff#index"
-  post "staff", to: "staff#create"
-  get "staff/new", to: "staff#new", as: "new_staff"
-  get "staff/:name/edit", to: "staff#edit"
-  put "staff/:name", to: "staff#update", as: "update_staff"
-  delete "staff/:name", to: "staff#delete"
+  # get "staff", to: "staff#index"
+  # post "staff", to: "staff#create"
+  # get "staff/new", to: "staff#new", as: "new_staff"
+  # get "staff/:name/edit", to: "staff#edit", as: "edit_staff"
+  # put "staff/:name", to: "staff#update", as: "update_staff"
+  # delete "staff/:name", to: "staff#delete"
 
   # get "clients", to: "clients#index"
   # post "clients", to: "clients#create"

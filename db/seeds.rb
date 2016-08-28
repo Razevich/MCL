@@ -9,9 +9,10 @@
 
 # rails g scaffold Tv year:integer title:text description:text img_url:text favorite:boolean
 
+# rails g scaffold Staffs title:text name:text bio:text img_url:string
 
 # staff information
-staff_list = [ 
+staffs_list = [ 
 	["Owner and Founder", "MATT LILLEY", "Matt Lilley created MCL Music Services in 2009 to provide Music Clearance, Licensing, and Supervision services to the Film, Television, and Advertising communities. Previously the Director of Music Clearance in the Feature Film division at Paramount Pictures from 1996 - 2008, Matt was responsible for much of the clearance negotiating and licensing in many of Paramount’s most successful films and soundtracks over that span of time. 
 
 	In late 2008, Matt was named Vice President of Music Clearance and Licensing at Lionsgate Entertainment (in charge of the Film, Television, and Marketing divisions of the company) which he transitioned into maintaining as his first client under the umbrella of MCL Music Services.
@@ -37,8 +38,33 @@ In addition to her extensive roll on the TV side she also works on various side 
 Along with Haley’s passion for music, whether live, recorded or singing a tune herself, she also has love for photography and just about anything creative.", "HaleyHanna.jpg"]
 ]
 
-staff_list.each do |title, name, bio, img_url|
+staffs_list.each do |title, name, bio, img_url|
   Staff.create( title: title, name: name, bio: bio, img_url: img_url )
 end
+
+# client information
+client_list = [
+	["LIONSGATE", "clients_logos/Lionsgate.jpg", "(FILM / TV / MARKETING)"],
+	["NETFLIX", "clients_logos/Netflix.png"],
+	["MGM", "clients_logos/MGM.jpg"],
+	["SHOWTIME", "clients_logos/Showtime.png"],
+	["TELEMUNDO", "clients_logos/Telemundo.png"],
+	["CBS FILMS", "clients_logos/CBSFilms.png"],
+	["TNT", "clients_logos/TNT.png"],
+	["PRIMARY WAVE", "clients_logos/PrimaryWave.png"],
+	["YAHOO! MUSIC", "clients_logos/Yahoo!.jpg"],
+	["THE PRODUCER’S LAB", "clients_logos/ProducersLab.png"],
+	["ROGUE ATLAS PRODUCTIONS", "clients_logos/RogueAtlas.jpg"],
+	["THE ANNENBERG FOUNDATION", "clients_logos/AnnebergFoundation.jpg"],
+	["ARCLIGHT PRODUCTIONS", "clients_logos/ArclightProductions.png"],
+	["THE RAY CHARLES MARKETING GROUP", "clients_logos/RayCharles.png"]
+]
+
+client_list.each do |name, img_url, description|
+  Client.create( name: name, img_url: img_url, description: description )
+end
+
+
+
 
 

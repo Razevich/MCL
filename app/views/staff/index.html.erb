@@ -1,12 +1,14 @@
 <div class="main_background">
-
-	<% @staff.each do |staff| %>
-<div class="staff_frame">
-	 <%= image_tag(staff.img_url, :class => "staff_img") %>
-	 <h1 class="staff"><%= staff.name %></h1>
-	 <h3><%= staff.title %></h3>
-	 <p><%= staff.bio %></p>
-	 <!-- <div class="divider"></div> -->
-</div>
+  <% @staff.each do |staff| %>
+    <div class="staff_frame">
+      <%= image_tag(staff.img_url, :class => "staff_img") %>
+        <h1 class="staff"><%= staff.name %></h1>
+        <h3><%= staff.title %></h3>
+        <p><%= staff.bio %></p>	
+                <td><%= link_to 'Show', staff %></td>
+        <td><%= link_to 'Edit', edit_staff_path(staff) %></td>
+        <td><%= link_to 'Destroy', staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ 
+    </div>
 	<% end %>
 </div>
