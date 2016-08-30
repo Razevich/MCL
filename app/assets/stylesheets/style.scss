@@ -65,10 +65,13 @@ body {
 // home & admin
 .modal_box {
   background-color: white;
-  padding: 10px;
+  padding: 3%;
   border-radius: 10px;
   margin: 10px;
   text-align: left;
+  @media #{$small-and-down} {
+    padding: 10px;
+    }
 }
 
 .tagline  {
@@ -175,4 +178,8 @@ body {
   @media #{$medium-and-down} {
   clear: both;
   }
+}
+
+.info {
+  border: 1pt solid gray;
 }

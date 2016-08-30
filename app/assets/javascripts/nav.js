@@ -6,9 +6,10 @@ $(document).ready(function() {
   //   $(this).addClass('active');
   // });
 
- 	 $('.parallax').parallax();
+ 	$('.parallax').parallax();
   $('#ilm_description').val();
   $('#ilm_description').trigger('autoresize');
+  // $('.tooltipped').tooltip({postiton:right});
 
  	$('.modal-trigger').leanModal();
  	  // Initialize collapse button

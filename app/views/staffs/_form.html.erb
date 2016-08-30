@@ -12,7 +12,7 @@
   <% end %>
 
 <p id="notice" class="notice"><%= notice %></p>
-
+  <!-- <a class="btn tooltipped" data-position="right" data-tooltip="<em>*italic* </em> <strong>**bold** </strong> >quote">i</a> -->
   <div class="modal_box">
 
   <div class="field">
@@ -25,8 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :bio %><br>
-    <textarea id="staff[bio]" class="materialize-textarea">
-     <%= (@staff.bio)%></textarea>
+    <%= f.text_area :bio,  class: "materialize-textarea" %>
   </div>
   <div class="field">
     <%= f.label :img_url %><br>
@@ -37,3 +36,5 @@
   </div>
   </div>
 <% end %>
+
+  
