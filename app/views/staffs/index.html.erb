@@ -7,9 +7,10 @@
       <%= image_tag(staff.img_url, :class => "staff_img") %>
         <h1 class="staff"><%= staff.name %></h1>
         <h3><%= staff.title %></h3>
-        <p><%= staff.bio %></p> 
+        <p><%= markdown(staff.bio) %></p> 
+
         <div class="admin_box">
-          <% if @admin %>
+          <% if !@admin %>
             <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_staff_path(staff) %> | 
             <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, staff, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
@@ -20,7 +21,7 @@
 
 
     <div class="admin_box">
-      <% if @admin %>
+      <% if !@admin %>
         <%= link_to 'New Film', new_staff_path, :class => "waves-effect waves-light btn valign" %>
       <% end %>
     </div>

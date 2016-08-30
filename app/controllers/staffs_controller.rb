@@ -30,7 +30,7 @@ class StaffsController < ApplicationController
   def update
     respond_to do |format|
       if @staff.update(staff_params)
-        format.html { redirect_to staffs_path, notice: 'Staff was successfully updated.' }
+        format.html { redirect_to staffs_path, notice: 'Staff was successfully updated. Really' }
       else
         format.html { render :edit }
       end

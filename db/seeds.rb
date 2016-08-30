@@ -12,17 +12,15 @@
 # rails g scaffold Staffs title:text name:text bio:text img_url:string
 
 # staff information
-staffs_list = [ 
-	["Owner and Founder", "MATT LILLEY", "Matt Lilley created MCL Music Services in 2009 to provide Music Clearance, Licensing, and Supervision services to the Film, Television, and Advertising communities. Previously the Director of Music Clearance in the Feature Film division at Paramount Pictures from 1996 - 2008, Matt was responsible for much of the clearance negotiating and licensing in many of Paramount’s most successful films and soundtracks over that span of time. 
+staffs_list = [
 
-	In late 2008, Matt was named Vice President of Music Clearance and Licensing at Lionsgate Entertainment (in charge of the Film, Television, and Marketing divisions of the company) which he transitioned into maintaining as his first client under the umbrella of MCL Music Services.
+["Owner and Founder", "MATT LILLEY", "Matt Lilley created MCL Music Services in 2009 to provide Music Clearance, Licensing, and Supervision services to the Film, Television, and Advertising communities. Previously the Director of Music Clearance in the Feature Film division at Paramount Pictures from 1996 - 2008, Matt was responsible for much of the clearance negotiating and licensing in many of Paramount’s most successful films and soundtracks over that span of time.
 
-	Over the past several years MCL Music Services has expanded its services and now works in Music Supervision in the independent film and documentary world, Catalogue Administration, and Musicology services in conjunction with Denise Carver, Esq. of CarverMusik (http://www.carvermusik.com)
+In late 2008, Matt was named Vice President of Music Clearance and Licensing at Lionsgate Entertainment (in charge of the Film, Television, and Marketing divisions of the company) which he transitioned into maintaining as his first client under the umbrella of MCL Music Services.
 
-	An avid fan of jazz music, Matt is a lifelong saxophone player, performing with his jazz quartet in the greater Los Angeles area.  
+Over the past several years MCL Music Services has expanded its services and now works in Music Supervision in the independent film and documentary world, Catalogue Administration, and Musicology services in conjunction with Denise Carver, Esq. of CarverMusik (http://www.carvermusik.com)
 
-	Matt holds a Master of Business Administration degree from the University of Phoenix (2003) and a Bachelor of Arts Degree in Music Industry Studies from California State University, Northridge (1997).
-	", "MattLilley.jpg"],
+An avid fan of jazz music, Matt is a lifelong saxophone player, performing with his jazz quartet in the greater Los Angeles area. Matt holds a Master of Business Administration degree from the University of Phoenix (2003) and a Bachelor of Arts Degree in Music Industry Studies from California State University, Northridge (1997).", "MattLilley.jpg"],
 
 ["Director of Music Clearance and Licensing", "HEIHACHIRO FUKUDA", "Heihachiro Fukuda joined MCL Music Services after graduating, in 2010, from California State University, Northridge with a Bachelor of Arts in Music Industry Studies. Heihachiro runs the marketing department where he handles clearance and licensing on the high profile series such as The Hunger Games, The Divergent, The Expendables, and more… 
 
@@ -43,26 +41,26 @@ staffs_list.each do |title, name, bio, img_url|
 end
 
 # client information
-client_list = [
-	["LIONSGATE", "clients_logos/Lionsgate.jpg", "(FILM / TV / MARKETING)"],
-	["NETFLIX", "clients_logos/Netflix.png"],
-	["MGM", "clients_logos/MGM.jpg"],
-	["SHOWTIME", "clients_logos/Showtime.png"],
-	["TELEMUNDO", "clients_logos/Telemundo.png"],
-	["CBS FILMS", "clients_logos/CBSFilms.png"],
-	["TNT", "clients_logos/TNT.png"],
-	["PRIMARY WAVE", "clients_logos/PrimaryWave.png"],
-	["YAHOO! MUSIC", "clients_logos/Yahoo!.jpg"],
-	["THE PRODUCER’S LAB", "clients_logos/ProducersLab.png"],
-	["ROGUE ATLAS PRODUCTIONS", "clients_logos/RogueAtlas.jpg"],
-	["THE ANNENBERG FOUNDATION", "clients_logos/AnnebergFoundation.jpg"],
-	["ARCLIGHT PRODUCTIONS", "clients_logos/ArclightProductions.png"],
-	["THE RAY CHARLES MARKETING GROUP", "clients_logos/RayCharles.png"]
-]
+# client_list = [
+# 	["LIONSGATE", "clients_logos/Lionsgate.jpg", "(FILM / TV / MARKETING)"],
+# 	["NETFLIX", "clients_logos/Netflix.png"],
+# 	["MGM", "clients_logos/MGM.jpg"],
+# 	["SHOWTIME", "clients_logos/Showtime.png"],
+# 	["TELEMUNDO", "clients_logos/Telemundo.png"],
+# 	["CBS FILMS", "clients_logos/CBSFilms.png"],
+# 	["TNT", "clients_logos/TNT.png"],
+# 	["PRIMARY WAVE", "clients_logos/PrimaryWave.png"],
+# 	["YAHOO! MUSIC", "clients_logos/Yahoo!.jpg"],
+# 	["THE PRODUCER’S LAB", "clients_logos/ProducersLab.png"],
+# 	["ROGUE ATLAS PRODUCTIONS", "clients_logos/RogueAtlas.jpg"],
+# 	["THE ANNENBERG FOUNDATION", "clients_logos/AnnebergFoundation.jpg"],
+# 	["ARCLIGHT PRODUCTIONS", "clients_logos/ArclightProductions.png"],
+# 	["THE RAY CHARLES MARKETING GROUP", "clients_logos/RayCharles.png"]
+# ]
 
-client_list.each do |name, img_url, description|
-  Client.create( name: name, img_url: img_url, description: description )
-end
+# client_list.each do |name, img_url, description|
+#   Client.create( name: name, img_url: img_url, description: description )
+# end
 
 
 
