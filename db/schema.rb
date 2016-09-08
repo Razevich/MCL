@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826203321) do
+ActiveRecord::Schema.define(version: 20160908024352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160826203321) do
 
   create_table "films", force: :cascade do |t|
     t.text     "title"
+    t.integer  "project_id"
     t.integer  "year"
     t.text     "description"
     t.text     "img_url"
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20160826203321) do
   end
 
   create_table "marketings", force: :cascade do |t|
+    t.integer  "project_id"
     t.integer  "year"
     t.text     "title"
     t.text     "description"
@@ -70,7 +72,7 @@ ActiveRecord::Schema.define(version: 20160826203321) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "musicolgy_services", force: :cascade do |t|
+  create_table "musicology_services", force: :cascade do |t|
     t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -99,26 +101,10 @@ ActiveRecord::Schema.define(version: 20160826203321) do
     t.datetime "updated_at",                     null: false
   end
 
-  create_table "staffs", force: :cascade do |t|
-    t.text     "title"
-    t.text     "name"
-    t.text     "bio"
-    t.string   "img_url"
+  create_table "tvs", force: :cascade do |t|
+    t.integer  "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "tvs", force: :cascade do |t|
-    t.integer  "year"
-    t.text     "title"
-    t.text     "description"
-    t.text     "img_url"
-    t.boolean  "favorite",    default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-  end
-
-  add_foreign_key "projects", "films"
-  add_foreign_key "projects", "marketings"
-  add_foreign_key "projects", "tvs"
 end

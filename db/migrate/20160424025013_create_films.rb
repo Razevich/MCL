@@ -2,6 +2,7 @@ class CreateFilms < ActiveRecord::Migration
   def change
     create_table :films do |t|
       t.text     :title
+      t.integer  :project_id
       t.integer  :year
       t.text     :description
       t.text     :img_url

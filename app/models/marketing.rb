@@ -1,5 +1,6 @@
 class Marketing < ActiveRecord::Base
 
+  belongs_to :project
   after_save :check_for_and_create_favorite
 
   def change_favorite

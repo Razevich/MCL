@@ -1,7 +1,7 @@
 class MusicologyServicesController < ApplicationController
 
   def index
-    @musicology_services = MusicologyServices.first
+    @musicology_services = MusicologyService.first
   end
 
   #Create this right in the data base to start? then delete this file
