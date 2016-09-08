@@ -1,2 +1,2 @@
-class MusicolgyService < ActiveRecord::Base
+class MusicologyService < ActiveRecord::Base
 end
