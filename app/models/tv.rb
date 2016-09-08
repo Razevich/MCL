@@ -1,4 +1,4 @@
-class IndependedntFilm < ActiveRecord::Base
+class Tv < ActiveRecord::Base
   belongs_to :project
 
   after_save :check_for_and_create_favorite
@@ -23,11 +23,11 @@ class IndependedntFilm < ActiveRecord::Base
     elsif
       self.favorite == true && self.favorite_changed? == false
       favorite = Favorite.find_by(title: self.title)
-                  favorite.update(title: self.title,
-                                   year: self.year,
-                            description: self.description,
-                                img_url: self.img_url)
+
+      favorite.update(title: self.title,
+                        year: self.year,
+                description: self.description,
+                    img_url: self.img_url)
     end
   end
-
 end

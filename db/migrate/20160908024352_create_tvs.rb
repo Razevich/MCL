@@ -1,9 +1,8 @@
-class CreateMarketings < ActiveRecord::Migration
+class CreateTvs < ActiveRecord::Migration
   def change
-    create_table :marketings do |t|
-      t.integer  :project_id
-      t.integer  :year
+    create_table :tvs do |t|
       t.text     :title
+      t.integer  :year
       t.text     :description
       t.text     :img_url
       t.boolean  :favorite, default: false
