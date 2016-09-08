@@ -10,6 +10,7 @@ $(document).ready(function() {
   $('#ilm_description').val();
   $('#ilm_description').trigger('autoresize');
   // $('.tooltipped').tooltip({postiton:right});
+  $('.materialboxed').materialbox();
 
  	$('.modal-trigger').leanModal();
  	  // Initialize collapse button
@@ -27,4 +28,11 @@ $(document).ready(function() {
                 $(this).addClass("open");
             }
         });
+
+
+$(window).load(function() {
+    $('.modal-trigger').leanModal();
+  });
+
+
 });
