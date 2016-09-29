@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-<!-- <div class="main"> -->
+<!-- <p id="notice"><%= notice %></p> -->
 <div class="film_frame">
 <div class="show_poster"><%= link_to image_tag(@film.img_url, :class => "poster")%></div>
 
@@ -10,14 +9,17 @@
   <%= @film.title %> <br>
 <span class="year"> <%= @film.year %></span> </h1>
 <div class="divider"></div>
-<p> <%= (@film.description) %> </p>
+<p> <%= markdown(@film.description) %> </p>
 
 
 <div class="divider"></div>
+
+
 <div class="admin_box">
-  <% if @admin %>
-    <%= link_to 'Edit', edit_film_path(@film) %> |
-    <%= link_to 'Back', films_path %>
+  <% if !@admin %>
+      <%= link_to '<span class="fa fa-arrow-left"></span> Back'.html_safe, films_path %> |
+    <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_film_path(@film) %> 
+
   <% end %>
 </div>
 

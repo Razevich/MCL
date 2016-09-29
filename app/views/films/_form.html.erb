@@ -24,8 +24,7 @@
     </div>
     <div class="field">
       <%= f.label :description %><br>
-    <textarea id="film[description]" class="materialize-textarea">
-     <%= (@film.description)%></textarea>
+      <%= f.text_area :description,  class: "materialize-textarea" %>
     </div>
     <div class="field">
       <%= f.label :img_url %><br>
@@ -37,7 +36,7 @@
       <label for="filled-in-box"><%= f.check_box :favorite %></label>
     </div>
     <div class="actions">
-      <%= f.submit "Save", class: "waves-effect waves-light btn modal-trigger" %>
+      <%= f.submit "Save", class: "btn" %>
     </div>
   </div>
 <% end %>

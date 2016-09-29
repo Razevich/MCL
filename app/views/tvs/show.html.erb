@@ -1,29 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="film_frame">
+<div class="show_poster"><%= link_to image_tag(@tv.img_url, :class => "poster")%></div>
 
-<p>
-  <strong>Year:</strong>
-  <%= @tv.year %>
-</p>
+<h1> 
+  <% if @tv.favorite == true %>
+  <span class="fa fa-star"></span> 
+  <% end %>
+  <%= @tv.title %><span class="network_name"> (<%= @tv.network %>)</span> <br>
+<span class="year"> <%= @tv.year %> - Season <%= @tv.season %></span> </h1>
+<div class="divider"></div>
+<p> <%= markdown(@tv.description) %> </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @tv.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @tv.description %>
-</p>
+<div class="divider"></div>
 
-<p>
-  <strong>Img url:</strong>
-  <%= @tv.img_url %>
-</p>
 
-<p>
-  <strong>Favorite:</strong>
-  <%= @tv.favorite %>
-</p>
+<div class="admin_box">
+  <% if !@admin %>
+      <%= link_to '<span class="fa fa-arrow-left"></span> Back'.html_safe, tvs_path %> |
+    <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_tv_path(@tv) %> 
 
-<%= link_to 'Edit', edit_tv_path(@tv) %> |
-<%= link_to 'Back', tv_path %>
+  <% end %>
+</div>
+
+</div>
+
