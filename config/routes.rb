@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  resources :staffs
+  #
+  # resources :staffs
   get 'home/index'
   root "home#index"
   get 'home/services'
@@ -9,12 +9,11 @@ Rails.application.routes.draw do
   resources :contacts
   resources :clients
   resources :films
-  # resources :staff
+  resources :tvs
+  resources :staffs
   # resources :projects
 
-  # namespace :projects do
-  # resources :films
-  # end
+
 
   get "projects", to: "projects#index"
 

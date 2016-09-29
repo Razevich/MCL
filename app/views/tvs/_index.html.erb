@@ -1,0 +1,42 @@
+<!-- <div class="main"> -->
+<p id="notice"><%= notice %></p>
+<h1>TV Shows</h1>
+  <div class="container project_frame">
+    <div class="row valign">
+      <% @tvs.each do |tv| %>
+        <div class="col s12 m6 l3 center">
+        <div class="poster_index">
+          <%= link_to image_tag(tv.img_url, :class => "poster_thumb"), tv %>
+        </div>
+        <div class="info"> 
+          <h5>
+          <% if tv.favorite == true %>
+            <span class="fa fa-star"></span> 
+          <% end %>
+          <%= tv.title %></h5> 
+          <h6>
+          <% if tv.year == nil %>
+          <%= "Coming Soon" %>
+          <% end %>
+          <%= tv.year %></h6> 
+        </div>
+        
+        <div class="admin_box">
+          <% if !@admin %>
+            <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_tv_path(tv) %> | 
+            <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, tv, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>  
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+    <div class="admin_box">
+      <% if @admin %>
+        <%= link_to 'New TV Show', new_tv_path, :class => "waves-effect waves-light btn valign" %>
+      <% end %>
+    </div>
+
+<!-- </div> -->

@@ -14,9 +14,8 @@ nav {
   background-color: $white;
   width: 100%;
   height: $navbar-height-mobile;
-  // line-height: $navbar-height-mobile;
+  line-height: $navbar-height-mobile;
   a { color: $navbar-font-color; }
-
 
 
   // Logo
@@ -34,7 +33,7 @@ nav {
     /*width: 60%;*/
     min-width: 250px;
     float: left;
-    margin-right: 30%;
+    margin-right: 250px;
 
     &.center {
       left: 50%;
@@ -43,12 +42,12 @@ nav {
 
 
     @media #{$medium-only} {
-      // left: 50%;
-      // transform: translateX(-50%);
+      left: 50%;
+      transform: translateX(-50%);
       min-width: 250px;
       margin-right: 0px;
       border: 0;
-      margin-right: 10%;
+      margin-right: 100px;
 
 
       &.left, &.right {
@@ -104,7 +103,6 @@ nav {
       float: left;
       padding: 0;
       text-decoration: none;
-      text-align: right;
 
       &.active {
         background-image: $lt-texture;
@@ -199,7 +197,7 @@ nav {
   display:none;
   span {
     display:inline-block;
-    padding: 20px 30px;
+    padding: 0 30px;
     background-color:$white;
     color:$color;
     cursor:pointer;
@@ -229,45 +227,33 @@ nav {
 
 
 nav#nav-mobile {
-  @media #{$medium-and-down} {
   // position:relative;
   display:none;
   ul {
-    // display:list-item;
-    // list-style-type:none;
+    display:none;
+    list-style-type:none;
     position:absolute;
-        left:0px;
-        right:0px;
-        margin: 0 150px;
-    text-align: center;
-    background-color:$white;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+    text-align:center;
+    background-color:$color;
   }
   li {
-    // display:block;
-    text-align: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    // border-bottom:solid 1px $primary;
-    border-top:solid 1px $primary;
-    &:last-child {
-      border-bottom:solid 1px $primary;
-    }
+    display:block;
+    padding:5px 0;
+    margin:0 5px;
   }
   a {
     display:block;
-    // color: $black
+    color:rgb(255,255,255);
     padding:10px 30px;
     &:hover {
       background-image: $lt-texture;
-      color: $primary;
-    }
-    &:active {
-      color: $primary;
-      font-weight: 600;
+    //   color:#fff;
     }
   }
-}
 }
 
 div#nav-trigger {

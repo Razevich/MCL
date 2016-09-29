@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @admin && @admin.authenticate(params[:session][:password])
       session[:admin_id] = @admin.id
       flash[:alert] = "Logged in as admin."
-      redirect_to :back
+      redirect_to "root/index"
     else
       flash[:alert] = "Invalid username or password."
       render "sessions/new"

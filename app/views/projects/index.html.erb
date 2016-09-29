@@ -1,4 +1,6 @@
-<h1>Films</h1>
-<!-- partial doesn't work, why? -->
+<div class="main">
+<p id="notice"><%= notice %></p>
 
-<%= render "films/index", locals: {films: @films} %>
+<%= render partial: "films/film_list", locals: { films: @films } %>
+<%= render partial: "tvs/index", locals: { tvs: @tvs } %>
+</div>

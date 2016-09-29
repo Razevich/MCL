@@ -3,6 +3,8 @@ class ProjectsController < ApplicationController
 
   def index
     # @projects = Project.all
+    @films = Film.all
+    @tvs = Tv.all
   end
 
   def show

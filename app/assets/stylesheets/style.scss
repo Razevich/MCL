@@ -51,7 +51,7 @@ body {
   padding: 10px 0 10px 0;
   max-width: 100%;
   height: auto;
-  // width: 100%;
+  width: 100%;
   margin-bottom: 0;
 }
 
@@ -92,11 +92,6 @@ body {
   padding: 20px;
 }
 
-.img_row {
-  display: block;
-  clear: both;
-}
-
 .client_logo {
   max-width: 200px;
 }
@@ -115,6 +110,9 @@ body {
 .poster_index {
   padding: 20px 20px 0 20px;
 }
+
+
+
 
 .staff_frame {
   background-image: $base-texture;
@@ -144,10 +142,11 @@ body {
   border-radius: 10px;
 }
 
-.musicology {
-  // padding: 20px;
-  margin: 1% 10%;
-}
+  .musicology {
+    // padding: 20px;
+    margin: 1% 10%;
+  }
+
 
 .film_card {
   border: 1pt solid red;
@@ -169,9 +168,6 @@ body {
 .map {
   float: right;
   padding: 20px 0 20px 20px;
-  @media #{$small-and-down} {
-    width: 300px;
-  }
 }
 
 
@@ -191,21 +187,5 @@ body {
 }
 
 .info {
-  border: 1pt solid gray;
-}
-
-.col_left {
-  float: left;
-  width: 45%;
-  margin-left: 5%;
-}
-
-.col_right {
-  float: right;
-  width: 45%;
-  margin-right: 5%;
-}
-
-.hidden {
-  visibility: none;
+  // border: 1pt solid gray;
 }
