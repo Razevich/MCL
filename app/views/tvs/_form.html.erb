@@ -2,7 +2,6 @@
   <% if @tv.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tv.errors.count, "error") %> prohibited this tv from being saved:</h2>
-
       <ul>
       <% @tv.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,8 +10,6 @@
     </div>
   <% end %>
 
-
-
 <div class="modal_box">
     <div class="field">
       <%= f.label :title %><br>
@@ -20,7 +17,11 @@
     </div>
     <div class="field">
       <%= f.label :year %><br>
-      <%= f.number_field :year %>
+      <%= f.text_field :year %>
+    </div>
+    <div class="field">
+      <%= f.label :season %><br>
+      <%= f.text_field :season %>
     </div>
     <div class="field">
       <%= f.label :description %><br>
@@ -30,13 +31,14 @@
       <%= f.label :img_url %><br>
       <%= f.text_field :img_url %>
     </div>
-    <div class="field">
+    <div class="field center">
       <%= f.label :favorite %><br>
       <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"/>
       <label for="filled-in-box"><%= f.check_box :favorite %></label>
     </div>
-    <div class="actions">
-      <%= f.submit "Save", class: "btn" %>
+    <div class="actions center">
+      <%= f.submit "Save", class: "btn" %>  or  
+      <%= link_to "Cancel", projects_url, class: "btn" %></div>
     </div>
   </div>
 <% end %>

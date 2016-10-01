@@ -128,22 +128,54 @@
 
 
 
-tvs_list = [
-	["Greenleaf", "OWN", 2016, 1, "Set against the backdrop of a family-run black megachurch. A concept straight from the heart of Oprah Winfrey: a loving tribute to her deep roots in the black church but also a resolute call to conscience for anyone using religion to exploit, denigrate, disempower, lie to, steal from, or just plain fuck with.", "tv_posters/Greenleaf1.jpg", false]
+# tvs_list = [
+# 	["Greenleaf", "OWN", "2016", "1", "Set against the backdrop of a family-run black megachurch. A concept straight from the heart of Oprah Winfrey: a loving tribute to her deep roots in the black church but also a resolute call to conscience for anyone using religion to exploit, denigrate, disempower, lie to, steal from, or just plain fuck with.", "tv_posters/Greenleaf1.jpg", true],
+
+# 	["Guilt","ABC Freeform", "2016", "1", "An edgy, soapy thriller that revolves around an American student in London who becomes the prime suspect in the murder of her roommate. Even her own sister, who comes to London to defend her, will question how she knows her.  This mystery will twist through all layers of London society from a posh but deprived sex club all the way up to the Royals Family itself.","tv_posters/Guilt1.jpg", false],
+
+# 	["Casual", "Hulu", "2015-2016", "1-2", "A new comedy series about a bachelor brother and his newly divorced sister living under one roof again. Together, they coach each other through the crazy world of dating while raising her teenage daughter.", "tv_posters/Casual1.jpg", true],
+
+# 	["Feed The Beast", "AMC", "2016", "1", "A one-hour drama from executive producer Clyde Phillips (Nurse Jackie) and Lionsgate.  Based off Danish format Bankerot, Thomas, a depressed widower and single father, reluctantly teams up with indebted ex-con Dion to open the restaurant they always dreamed of having.", "tv_posters/FeedTheBeast1.jpg", false],
+
+
+# ["The Rap Game", "Lifetime", "2016", "1", "School is out and summer is in full swing, but for seven aspiring artists, classes are just beginning! Learning from the best in the music industry, these young rappers have the opportunity to work with Grammy winner and producer Jermaine Dupri in an all-new season of, The Rap Game. To help mentor the young teens throughout the season, Dupri enlists the support from some of the most successful artists in the music industry including iconic singer Mariah Carey and legendary rappers Snoop Dogg, Timbaland, Nelly, Bow Wow, Monica, DaBrat, Flo Rida and producers, Bryan-Michael Cox, Zaytoven and Mike Kalombo. The winner will receive a recording contract with Dupri's label, So So Def Recordings. Grammy and Emmy award winner Queen Latifah and her partner Shakim Compere are executive producers under the Flavor Unit umbrella, alongside Mechelle Collins and Kevin Dill of Intuitive Entertainment and Dupri.
+
+# Produced by Intuitive Entertainment, *The Rap Game* is executive produced Kevin Dill and Mechelle Collins (*The Millionaire Matchmaker,* *Atlanta Plastic*), Ted Iredell (*Making the Band*), Perry Dance (*Making the Band*) and co-executive produced by Adam Schor (*The Biggest Loser*). Lifetime’s Mary Donahue and Mariana Flynn also executive produce in addition to Dupri, Latifah and Compere. Filmed in Atlanta, ten episodes have been ordered for this season.", "tv_posters/TheRapGame.jpg"],
+
+
+# ["Orange is the New Black", "Netflix", "2013-2016" "1-4", "The story of Piper Chapman, a woman in her thirties who is sentenced to fifteen months in prison after being convicted of a decade-old crime of transporting money to her drug-dealing girlfriend.", "tv_posters/OrangeIsTheNewBlack.jpg"]
+# ]
+
+# tvs_list.each do | title, network, year, season, description, img_url, favorite |
+# 	Tv.create(title: title, network: network, year: year, season: season, description: description, img_url: img_url, favorite: favorite)
+# end
+
+marketings_list = [
+	["Power Rangers", "2016", "Power Rangers is an American superhero film based on the superhero team of the same name and directed by Dean Israelite. It will be the third feature film of the Power Rangers franchise, and the first one in twenty years.
+	
+	A group of high-school kids, who are infused with unique superpowers, harness their abilities in order to save the world.", "marketing_posters/PowerRangers.jpg"]
 ]
 
-
-
-tvs_list.each do | title, network, year, season, description, img_url, favorite |
-	Tv.create(title: title, network: network, year: year, season: season, description: description, img_url: img_url, favorite: favorite)
-
+marketings_list.each do | title, year, description, img_url, favorite |
+	Marketing.create(title: title, year: year, description: description, img_url: img_url, favorite: favorite)
 end
 
-# Greenleaf - OWN
-# Season 1 (2016)
+# •	Power Rangers (2016) - Lionsgate 
+# Power Rangers is an American superhero film based on the superhero team of the same name and directed by Dean Israelite. It will be the third feature film of the Power Rangers franchise, and the first one in twenty years.
 
-# Set against the backdrop of a family-run black megachurch. A concept straight from the heart of Oprah Winfrey: a loving tribute to her deep roots in the black church but also a resolute call to conscience for anyone using religion to exploit, denigrate, disempower, lie to, steal from, or just plain fuck with.
+# A group of high-school kids, who are infused with unique superpowers, harness their abilities in order to save the world.
 
+
+# •	Manchester By The Sea (2016) – Roadside Attractions
+# Manchester by the Sea is an American drama film directed and written by Kenneth Lonergan. The film stars Casey Affleck, Michelle Williams and Kyle Chandler. Lee Chandler is made a legal guardian of his dead brother's son and returns to his hometown to care for the teenage boy.
+
+# After the sudden death of Joe Chandler, his younger brother Lee is made legal guardian of his son. Lee returns to his hometown and has to deal with both his separated wife Randi and the community of North Shore.
+
+
+# •	The Shack (2016) - Lionsgate 
+# The Shack is an American faith-based Christian drama film directed by Stuart Hazeldine and written by John Fusco, based on the 2007 novel of same name by William P. Young.
+
+# A grieving man receives a mysterious, personal invitation to meet with God at a place called "The Shack."
 
 
 

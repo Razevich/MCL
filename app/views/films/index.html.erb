@@ -5,14 +5,14 @@
   <div class="container project_frame">
     <div class="row valign">
   		<% @films.each do |film| %>
-        <div class="col s12 m6 l3 center">
+        <div class="col s6 m6 l3 center">
         <div class="poster_index">
           <%= link_to image_tag(film.img_url, :class => "poster_thumb"), film %>
         </div>
       	<div class="info"> 
           <h5>
           <% if film.favorite == true %>
-            <span class="fa fa-star"></span> 
+            <span class="fa fa-star secondary"></span> 
           <% end %>
           <%= film.title %></h5> 
           <h6>

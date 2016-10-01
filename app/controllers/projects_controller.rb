@@ -5,6 +5,8 @@ class ProjectsController < ApplicationController
     # @projects = Project.all
     @films = Film.all
     @tvs = Tv.all
+    @marketings = Marketing.all
+    @indie_films = IndieFilm.all
   end
 
   def show

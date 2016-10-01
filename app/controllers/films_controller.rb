@@ -28,7 +28,7 @@ class FilmsController < ApplicationController
 
     respond_to do |format|
       if @film.save
-        format.html { redirect_to @film, notice: 'Film was successfully created.' }
+        format.html { redirect_to projects_url, notice: 'Film was successfully created.' }
         # format.json { render :show, status: :created, location: @film }
       else
         format.html { render :new }

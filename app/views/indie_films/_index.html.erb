@@ -1,0 +1,33 @@
+<h1>Indie Films</h1>
+  <div class="container project_frame">
+    <div class="row valign">
+      <% @indie_films.each do |indie_film| %>
+        <div class="col s12 m6 l3 center">
+        <div class="poster_index">
+          <%= link_to image_tag(indie_film.img_url, :class => "poster_thumb"), indie_film %>
+        </div>
+        <div class="info"> 
+          <h5>
+          <% if indie_film.favorite == true %>
+            <span class="fa fa-star secondary"></span> 
+          <% end %>
+          <%= indie_film.title %></h5> 
+          <h6><%= indie_film.year %></h6> 
+        </div>
+        
+        <div class="admin_box">
+          <% if !@admin %>
+            <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_indie_film_path(indie_film) %> | 
+            <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, indie_film, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>  
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<div class="admin_box">
+  <% if !@admin %>
+    <%= link_to '<span class="fa fa-plus"></span> New Indie Film'.html_safe, new_indie_film_path, :class => "btn valign" %>
+  <% end %>
+</div>

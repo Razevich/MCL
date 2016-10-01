@@ -16,6 +16,7 @@ $(document).ready(function() {
   $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   //$('.collapsible').collapsible();
+  $('.carousel.carousel-slider').carousel({full_width: true});
   $('select').material_select();
   $('select').material_select('destroy');
 

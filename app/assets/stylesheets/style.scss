@@ -99,6 +99,11 @@ body {
 .poster_thumb {
   max-height: 200px;
   z-index: 2;
+  cursor: pointer;
+  display:inline-block;
+  &:hover {
+    box-shadow: 1px 1px 10px lighten($black, 70%); 
+  }
 }
 
 .poster {
@@ -131,6 +136,12 @@ body {
   // min-height: 440px;
   border-radius: 10px;
   width: 100%;
+  // overflow-y: hidden;
+  overflow-x: scroll;
+  white-space:nowrap;
+  // overflow: auto;
+  box-shadow: inset 1px 1px 20px lighten($black, 80%);
+  height: 340px;
 }
 
 .film_frame {
@@ -188,4 +199,8 @@ body {
 
 .info {
   // border: 1pt solid gray;
+}
+
+.form {
+  padding: 2% 5%;
 }

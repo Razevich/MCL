@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :indie_films
   #
   # resources :staffs
   get 'home/index'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   resources :films
   resources :tvs
   resources :staffs
+  resources :marketings
   # resources :projects
 
 
@@ -44,13 +46,13 @@ Rails.application.routes.draw do
   # put "films/:title", to: "films#update", as: "update_film"
   # delete "films/:title", to: "films#delete"
 
-  get "independent_films", to: "independent_films#index"
-  get "independent_films/:title",  to: "independent_films#show"
-  get "independent_films/new", to: "independent_films#new", as: "new_indie_film"
-  post "independent_films", to: "independent_films#create"
-  get "independent_films/:title/edit", to: "independent_films#edit"
-  put "independent_films/:title", to: "independent_films#update", as: "update_indie_film"
-  delete "independent_films/:title", to: "independent_films#delete"
+  # get "independent_films", to: "independent_films#index"
+  # get "independent_films/:title",  to: "independent_films#show"
+  # get "independent_films/new", to: "independent_films#new", as: "new_indie_film"
+  # post "independent_films", to: "independent_films#create"
+  # get "independent_films/:title/edit", to: "independent_films#edit"
+  # put "independent_films/:title", to: "independent_films#update", as: "update_indie_film"
+  # delete "independent_films/:title", to: "independent_films#delete"
 
   # get "tv", to: "tv#index"
   # get "tv/:title",  to: "tv#show"
@@ -60,13 +62,13 @@ Rails.application.routes.draw do
   # put "tv/:title", to: "tv#update", as: "update_tv"
   # delete "tv/:title", to: "tv#delete"
 
-  get "marketing", to: "marketing#index"
-  get "marketing/:title",  to: "marketing#show"
-  get "marketing/new", to: "marketing#new", as: "new_marketing"
-  post "marketing", to: "marketing#create"
-  get "marketing/:title/edit", to: "marketing#edit"
-  put "marketing/:title", to: "marketing#update", as: "update_marketing"
-  delete "marketing/:title", to: "marketing#delete"
+  # get "marketing", to: "marketing#index"
+  # get "marketing/:title",  to: "marketing#show"
+  # get "marketing/new", to: "marketing#new", as: "new_marketing"
+  # post "marketing", to: "marketing#create"
+  # get "marketing/:title/edit", to: "marketing#edit"
+  # put "marketing/:title", to: "marketing#update", as: "update_marketing"
+  # delete "marketing/:title", to: "marketing#delete"
 
   get "/login" => "sessions#new", as: "login"
   post "/login" => "sessions#create"

@@ -1,0 +1,23 @@
+<div class="film_frame">
+<div class="show_poster"><%= link_to image_tag(@indie_film.img_url, :class => "poster")%></div>
+
+<h1> 
+  <% if @indie_film.favorite == true %>
+  <span class="fa fa-star secondary"></span> 
+  <% end %>
+  <%= @indie_film.title %><span class="network_name"> (<%= @indie_film.distributor %>)</span> <br>
+<span class="year"> <%= @indie_film.year %>
+<div class="divider"></div>
+<p> <%= markdown(@indie_film.description) %> </p>
+
+<div class="divider"></div>
+
+<div class="admin_box">
+  <%= link_to '<span class="fa fa-arrow-left"></span> Back'.html_safe, projects_path %>
+  <% if @admin %>
+     | <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_indie_film_path(@indie_film) %>
+  <% end %>
+</div>
+
+</div>
+

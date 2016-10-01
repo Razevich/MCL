@@ -1,5 +1,3 @@
-<!-- <div class="main"> -->
-<!-- <p id="notice"><%= notice %></p> -->
 <h1>TV Shows</h1>
   <div class="container project_frame">
     <div class="row valign">
@@ -11,14 +9,11 @@
         <div class="info"> 
           <h5>
           <% if tv.favorite == true %>
-            <span class="fa fa-star"></span> 
+            <span class="fa fa-star secondary"></span> 
           <% end %>
           <%= tv.title %></h5> 
           <h6>
-          <% if tv.year == nil %>
-          <%= "Coming Soon" %>
-          <% end %>
-          <%= tv.year %></h6> 
+          <span class="network_name_index"> <%= tv.network %></span></h6> 
         </div>
         
         <div class="admin_box">
@@ -32,11 +27,8 @@
     </div>
   </div>
 
-
-    <div class="admin_box">
-      <% if @admin %>
-        <%= link_to 'New TV Show', new_tv_path, :class => "waves-effect waves-light btn valign" %>
-      <% end %>
-    </div>
-
-<!-- </div> -->
+<div class="admin_box">
+  <% if !@admin %>
+    <%= link_to '<span class="fa fa-plus"></span> New TV Show'.html_safe, new_tv_path, :class => "btn valign" %>
+  <% end %>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929190229) do
+ActiveRecord::Schema.define(version: 20161001151547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,17 @@ ActiveRecord::Schema.define(version: 20160929190229) do
     t.boolean  "favorite",    default: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "indie_films", force: :cascade do |t|
+    t.string   "title"
+    t.string   "distributor"
+    t.string   "year"
+    t.string   "description"
+    t.string   "img_url"
+    t.boolean  "favorite"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "marketings", force: :cascade do |t|
@@ -122,8 +133,8 @@ ActiveRecord::Schema.define(version: 20160929190229) do
 
   create_table "tvs", force: :cascade do |t|
     t.text     "title"
-    t.integer  "year"
-    t.integer  "season"
+    t.string   "year"
+    t.string   "season"
     t.text     "description"
     t.text     "network"
     t.text     "img_url"
