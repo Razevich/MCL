@@ -30,7 +30,7 @@ html{
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.1;
 }
 
@@ -106,6 +106,7 @@ span.network_name_index {
 
 span.subtitle {
   font-size: $h4-fontsize;
+  font-weight: 300;
   padding: 10px 10px 20px 0;
   color: lighten($black, 70%);
   text-align: center;  // float: right;
@@ -132,17 +133,17 @@ span.email {
   font-weight: 300;
 }
 
-span.b_link {
-  font-weight: 600;
-  a {
-  text-decoration: none;
-  color: lighten($black, 50%);
+// span.b_link {
+//   font-weight: 700;
+//   a {
+//   text-decoration: none;
+//   color: lighten($black, 50%);
 
-  &:hover {
-    color: $primary;
-  }
-}
-}
+//   &:hover {
+//     color: $primary;
+//   }
+// }
+// }
 
 .white-txt {
   color: white;

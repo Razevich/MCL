@@ -16,7 +16,7 @@
         </div>
         
         <div class="admin_box">
-          <% if !@admin %>
+          <% if @admin %>
             <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_indie_film_path(indie_film) %> | 
             <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, indie_film, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
@@ -27,7 +27,7 @@
   </div>
 
 <div class="admin_box">
-  <% if !@admin %>
+  <% if @admin %>
     <%= link_to '<span class="fa fa-plus"></span> New Indie Film'.html_safe, new_indie_film_path, :class => "btn valign" %>
   <% end %>
 </div>

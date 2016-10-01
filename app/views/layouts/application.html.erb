@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MCL</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <title>MCL Music Services</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,16 +14,13 @@
   <header>
     <div class="bar">
     </div>
-      <!-- <div class="navbar"> -->
         <nav>
-          <!-- <div class="nav-wrapper"> -->
           <%= link_to image_tag("MCL-Logo-Orange-RGB.png", :class => 'brand-logo'), {action: :'index', :controller => 'home'} %>
 
           <div id="nav-trigger">
             <span class="trig"></span>
           </div>
           <nav id="nav-main">
-          <!-- <ul class="right hide-on-med-and-down"> -->
             <ul>
               <li class="nav"><%= active_link_to '<span class="fa fa-home"></span> Home'.html_safe, home_index_path %></li>
               <!-- <li class="nav"><%= active_link_to "Services", home_services_path %></li> -->
@@ -34,14 +30,8 @@
               <li class="nav"><%= active_link_to "Musicology", musicology_services_path %></li>
               <li class="nav"><%= active_link_to "Contacts", contacts_path %></li>
             </ul>
-
           </nav>
-        <nav id="nav-mobile">
-        </nav>
-          <!-- </div> -->
-        <!-- </nav> -->
-      <!-- </div> -->
-
+        <nav id="nav-mobile"></nav>
 
   </header>
   <div class="bar"></div>
@@ -49,8 +39,8 @@
 <%= yield %>
 <footer>
 	  <ul>
-    <% if @admin %>
-      <a id="login-form" class="modal waves-effect waves-light btn modal-trigger right" href="/logout"><span class="fa fa-unlock"></span></a>
+    <% if !@admin %>
+      <a id="login-form" class="modal waves-effect waves-light admin-btn modal-trigger right" href="/logout"><span class="fa fa-unlock"></span></a>
       <li><%= link_to "Sign out", logout_path, method: "delete" %></li>
     <% else %>
       <li><a class="waves-effect waves-light modal-trigger admin-btn right" href="/login"><span class="fa fa-lock"></span></a></li>

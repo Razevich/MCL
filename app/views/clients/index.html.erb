@@ -1,29 +1,27 @@
-<!-- <p id="notice" class="notice"><%= notice %></p> -->
-
 <div class="main">
+<p id="notice" class="notice"><%= notice %></p>
 <div class="container center">
   <% @clients.each do |client| %>
-		<!-- <ul class="list"> -->
 		<div class="client_row">
-		<div class="row">
-		<div class="col s6 center_align">
-			<%= image_tag(client.img_url, :class => "client_logo") %>
-			<div class="admin_box">
-			  <% if !@admin %>
-			  <div class="admin_options"><%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_client_path(client) %>  |  <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, client, method: :delete, data: { confirm: 'Are you sure?' } %>
+			<div class="row">
+			<div class="col s6 center_align">
+				<%= image_tag(client.img_url, :class => "client_logo") %>
+
+				<div class="admin_box">
+				  <% if @admin %>
+				  <div class="admin_options"><%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_client_path(client) %>  |  <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, client, method: :delete, data: { confirm: 'Are you sure?' } %>
+				  </div>
+				  <% end %>
 			  </div>
-			  <% end %>
+
+			</div>
+
+			<div class="col s6 center_align clear">
+				<span class="client_name"><%= client.name %></span><br>
+				<span class="subtitle"><%= client.description %></span>
+			</div>
+
 		  </div>
-		</div>
-
-
-		<div class="col s6 center_align clear">
-		<span class="client_name"><%= client.name %></span><br>
-		<span class="subtitle"><%= client.description %></span>
-		</div>
-
-
-	  </div>
 	  </div>
   <% end %>
 

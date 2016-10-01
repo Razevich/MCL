@@ -33,7 +33,7 @@
 
 
 <div class="admin_box">
-  <% if !@admin %>
+  <% if @admin %>
     <%= link_to'<span class="fa fa-plus"></span> New Film'.html_safe, new_film_path, :class => "btn valign" %>
   <% end %>
 </div>
