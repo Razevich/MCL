@@ -2,7 +2,8 @@
 
 li.nav a {
   &:hover {
-    // text-shadow: 1px 1px 1px lighten($secondary, 10%); 
+    text-shadow: 1px 1px 1px 2px lighten($primary, 20%); 
+    font-weight: 300;
   }
 }
 
@@ -22,6 +23,7 @@ nav {
   background-color: $white;
   width: 100%;
   height: $navbar-height-mobile;
+  font-weight: 300;
   line-height: $navbar-height-mobile;
   a { color: $navbar-font-color; }
 

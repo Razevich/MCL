@@ -9,7 +9,7 @@
 		<div class="col s6 center_align">
 			<%= image_tag(client.img_url, :class => "client_logo") %>
 			<div class="admin_box">
-			  <% if @admin %>
+			  <% if !@admin %>
 			  <div class="admin_options"><%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_client_path(client) %>  |  <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, client, method: :delete, data: { confirm: 'Are you sure?' } %>
 			  </div>
 			  <% end %>

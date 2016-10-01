@@ -64,11 +64,11 @@
   @extend .z-depth-1!optional;
   transition: .2s ease-out;
   cursor: pointer;
-  margin: 1% 0 2%;
+  margin: 1% 1% 2% 1%;
 
   &:hover {
     background-color: $button-raised-background-hover;
-    box-shadow: 1px 1px 10px #999; 
+    box-shadow: 1px 1px 10px lighten($black, 40%); 
     color: $white;
     @extend .z-depth-1-half!optional;
   }
