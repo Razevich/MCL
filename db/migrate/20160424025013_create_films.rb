@@ -20,4 +20,4 @@ end
 
 # film title:string year:integer description:string img_url:string
 
-rails g scaffold IndieFilms title:string distributor:string year:string description:string img_url:string favorite:boolean
+# rails g scaffold IndieFilms title:string distributor:string year:string description:string img_url:string favorite:boolean
