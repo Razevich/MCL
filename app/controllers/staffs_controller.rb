@@ -2,7 +2,7 @@ class StaffsController < ApplicationController
   before_action :set_staff, only: [:show, :edit, :update, :destroy]
 
   def index
-    @staffs = Staff.all
+    @staff = Staff.all
   end
 
   def show

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet">
-  
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -33,21 +33,22 @@
       </ul>
 
         </nav>
-        <nav id="nav-mobile"></nav>
+        <nav id="nav-mobile">
+        </nav>
+          <!-- </div> -->
+        <!-- </nav> -->
       <!-- </div> -->
-    <!-- </nav> -->
-  <!-- </div> -->
 
 
   </header>
   <div class="bar"></div>
-  
+
 <%= yield %>
 <footer>
 	  <ul>
     <% if @admin %>
-    <a id="login-form" class="modal waves-effect waves-light btn modal-trigger right" href="/logout"><span class="fa fa-unlock"></span></a>
-    <li><%= link_to "Sign out", logout_path, method: "delete" %></li>
+      <a id="login-form" class="modal waves-effect waves-light btn modal-trigger right" href="/logout"><span class="fa fa-unlock"></span></a>
+      <li><%= link_to "Sign out", logout_path, method: "delete" %></li>
     <% else %>
       <li><a class="waves-effect waves-light btn modal-trigger right" href="/login"><span class="fa fa-lock"></span></a></li>
     <% end %>

@@ -2,7 +2,7 @@
 
 <div class="main_background">
 <p id="notice"><%= notice %></p>
-  <% @staffs.each do |staff| %>
+  <% @staff.each do |staff| %>
     <div class="staff_frame">
       <%= image_tag(staff.img_url, :class => "staff_img") %>
         <h1 class="staff"><%= staff.name %></h1>
@@ -16,7 +16,6 @@
           <% end %>
     </div>
   <% end %>
-
 
   <% if @admin %>
     <div class="admin_box">
