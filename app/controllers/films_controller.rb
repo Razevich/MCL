@@ -6,7 +6,6 @@ class FilmsController < ApplicationController
   end
 
   def show
-    # @film = Film.find_by(title: params[:title])
   end
 
   def new
@@ -14,7 +13,6 @@ class FilmsController < ApplicationController
   end
 
   def edit
-    # @film = Film.find_by(title: params[:title])
   end
 
   # def create
@@ -30,7 +28,7 @@ class FilmsController < ApplicationController
 
     respond_to do |format|
       if @film.save
-        format.html { redirect_to @film, notice: 'Film was successfully created.' }
+        format.html { redirect_to projects_url, notice: 'Film was successfully created.' }
         # format.json { render :show, status: :created, location: @film }
       else
         format.html { render :new }
@@ -41,9 +39,9 @@ class FilmsController < ApplicationController
 
 
   def update
-    @film = Film.find_by(title: params[:title])
+    # @film = Film.find_by(title: params[:title])
 
-    @film.update(film_params)
+    # @film.update(film_params)
     respond_to do |format|
       if @film.update(film_params)
         format.html { redirect_to @film, notice: 'Film was successfully updated.' }
@@ -63,10 +61,10 @@ class FilmsController < ApplicationController
     def destroy
       @film.destroy
       respond_to do |format|
-        format.html { redirect_to films_url, notice: 'Film was successfully destroyed.' }
+        format.html { redirect_to projects_url, notice: 'Film was successfully destroyed.' }
         format.json { head :no_content }
       end
-      @film = Film.find_by(title: params[:title])
+      # @film = Film.find_by(title: params[:title])
     end
 
   # def destroy
@@ -82,7 +80,7 @@ class FilmsController < ApplicationController
       @film = Film.find(params[:id])
     end
 
-  def film_param
+  def film_params
     params.require(:film).permit(:title, :year, :description, :img_url, :favorite)
   end
 

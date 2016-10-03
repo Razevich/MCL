@@ -99,6 +99,11 @@ body {
 .poster_thumb {
   max-height: 200px;
   z-index: 2;
+  cursor: pointer;
+  display:inline-block;
+  &:hover {
+    box-shadow: 1px 1px 10px lighten($black, 50%); 
+  }
 }
 
 .poster {
@@ -111,11 +116,25 @@ body {
   padding: 20px 20px 0 20px;
 }
 
+
+// .left_col {
+//   margin-left: 10%;
+//   margin-right: 2%;
+//   width: 38%;
+// }
+
+// .right_col {
+//   margin-left: 2%;
+//   margin-right: 10%;
+//   width: 38%;
+// }
+
 .staff_frame {
   background-image: $base-texture;
   border-radius: 10px;
-  margin: 2% 10%;
-  padding: 10px;
+  margin: 1% 10%;
+  padding: 10px 30px 20px 20px;
+  // padding-bottom: 20px;
 
 }
 
@@ -127,6 +146,12 @@ body {
   // min-height: 440px;
   border-radius: 10px;
   width: 100%;
+  // overflow-y: hidden;
+  overflow-x: scroll;
+  white-space:nowrap;
+  // overflow: auto;
+  box-shadow: inset 1px 1px 20px lighten($black, 80%);
+  height: 340px;
 }
 
 .film_frame {
@@ -138,9 +163,11 @@ body {
   border-radius: 10px;
 }
 
-.show_poster {
+  .musicology {
+    // padding: 20px;
+    margin: 1% 10%;
+  }
 
-}
 
 .film_card {
   border: 1pt solid red;
@@ -181,5 +208,9 @@ body {
 }
 
 .info {
-  border: 1pt solid gray;
+  // border: 1pt solid gray;
+}
+
+.form {
+  padding: 2% 5%;
 }

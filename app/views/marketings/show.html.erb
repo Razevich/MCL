@@ -1,0 +1,23 @@
+<div class="film_frame">
+<div class="show_poster"><%= link_to image_tag(@marketing.img_url, :class => "poster")%></div>
+
+<h1> 
+  <% if @marketing.favorite == true %>
+  <span class="fa fa-star"></span> 
+  <% end %>
+  <%= @marketing.title %> <br>
+<span class="year"> <%= @marketing.year %></span> </h1>
+<div class="divider"></div>
+<p> <%= markdown(@marketing.description) %> </p>
+
+<div class="divider"></div>
+
+<div class="admin_box">
+  <%= link_to '<span class="fa fa-arrow-left"></span> Back'.html_safe, projects_path %>
+  <% if @admin %>
+     | <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_marketing_path(@marketing) %>
+  <% end %>
+</div>
+
+</div>
+

@@ -6,7 +6,7 @@ a {
   color: $primary;
 
   &:hover {
-    color: $secondary;
+    color: lighten($secondary, 10%);
   }
 }
 
@@ -30,8 +30,8 @@ html{
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
-	line-height: 1.1;
+  font-weight: 300;
+  line-height: 1.1;
 }
 
 // Header Styles
@@ -60,6 +60,8 @@ p {
   line-height: 160%;
   font-size: $p-fontsize;
   padding-bottom: 10px;
+  orphans: 0;
+  text-align: justify;
 }
 
 .divider {
@@ -67,7 +69,7 @@ p {
   margin: 20px;
 }
 
-.notice {
+#notice {
   color: $primary;
   font-weight: 500;
   text-align: center;
@@ -84,8 +86,27 @@ span.client_name {
   font-weight: 200;
 }
 
+span.network_name {
+  font-size: $h1-fontsize;
+  padding: 10px 10px 10px 0;
+  // color: lighten($primary, 50%);
+  color: $secondary;
+  text-align: center; 
+  font-weight: 100;
+}
+
+span.network_name_index {
+  font-size: $h6-fontsize;
+  padding: 10px 10px 10px 0;
+  // color: lighten($primary, 50%);
+  color: $secondary;
+  text-align: center; 
+  font-weight: 100;
+}
+
 span.subtitle {
   font-size: $h4-fontsize;
+  font-weight: 300;
   padding: 10px 10px 20px 0;
   color: lighten($black, 70%);
   text-align: center;  // float: right;
@@ -99,6 +120,11 @@ span.year {
   // float: right;
 }
 
+.secondary {
+  color: $secondary;
+  margin-left: -5px;
+}
+
 span.email {
   font-size: $h3-fontsize;
   // padding: 10px 10px 0 0;
@@ -107,9 +133,36 @@ span.email {
   font-weight: 300;
 }
 
+// span.b_link {
+//   font-weight: 700;
+//   a {
+//   text-decoration: none;
+//   color: lighten($black, 50%);
+
+//   &:hover {
+//     color: $primary;
+//   }
+// }
+// }
+
 .white-txt {
   color: white;
   margin-top: 20px;
+}
+
+
+.bullets {
+  color: lighten($black, 50%);
+  font-weight: 300;
+  line-height: 130%;
+  font-size: 14pt;
+  padding-bottom: 10px;
+  margin-left: 20%;
+  orphans: 0;
+  li {
+    padding-bottom: 10px;
+    list-style-type: circle;
+  }
 }
 
 .flow-text{

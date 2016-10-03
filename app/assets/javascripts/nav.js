@@ -7,8 +7,8 @@ $(document).ready(function() {
   // });
 
  	$('.parallax').parallax();
-  $('#ilm_description').val();
-  $('#ilm_description').trigger('autoresize');
+  // $('#film_description').val();
+  $('#film_description').trigger('autoresize');
   // $('.tooltipped').tooltip({postiton:right});
 
  	$('.modal-trigger').leanModal();
@@ -16,6 +16,8 @@ $(document).ready(function() {
   $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   //$('.collapsible').collapsible();
+  $('select').material_select();
+  $('select').material_select('destroy');
 
   $("#nav-mobile").html($("#nav-main").html());
         $("#nav-trigger span").click(function(){
@@ -25,6 +27,7 @@ $(document).ready(function() {
             } else {
                 $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
                 $(this).addClass("open");
+                // $(this).reload();
             }
         });
 });
