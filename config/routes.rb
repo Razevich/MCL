@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  
+
   get 'home/index'
   root "home#index"
   get 'home/services'
 
   get "projects", to: "projects#index"
-  # resources :services
+
   resources :clients
   resources :films
   resources :tvs
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources :indie_films
   resources :staffs
   resources :contacts
-
 
   get "musicology_services", to: "musicology_services#index"
   get "musicology_services/edit", to: "musicology_services#edit"
