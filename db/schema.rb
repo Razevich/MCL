@@ -93,11 +93,13 @@ ActiveRecord::Schema.define(version: 20161001151547) do
     t.integer  "film_id"
     t.integer  "tv_id"
     t.integer  "marketing_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "independent_film_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   add_index "projects", ["film_id"], name: "index_projects_on_film_id", using: :btree
+  add_index "projects", ["independent_film_id"], name: "index_projects_on_independent_film_id", using: :btree
   add_index "projects", ["marketing_id"], name: "index_projects_on_marketing_id", using: :btree
   add_index "projects", ["tv_id"], name: "index_projects_on_tv_id", using: :btree
 
@@ -113,10 +115,10 @@ ActiveRecord::Schema.define(version: 20161001151547) do
   end
 
   create_table "staffs", force: :cascade do |t|
-    t.text   "name"
-    t.text   "title"
-    t.text   "bio"
-    t.string "img_url"
+    t.text "name"
+    t.text "title"
+    t.text "bio"
+    t.text "img_url"
   end
 
   create_table "tv_shows", force: :cascade do |t|
@@ -129,7 +131,7 @@ ActiveRecord::Schema.define(version: 20161001151547) do
     t.boolean  "favorite",    default: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-
+  end
 
   create_table "tvs", force: :cascade do |t|
     t.text     "title"
