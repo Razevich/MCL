@@ -22,7 +22,9 @@ body {
 
 .main_background {
   background-image: $lt-texture;
-  padding: 10px;
+  padding: 0 5%;
+  flex: 1 0 auto;
+  // padding: 10px;
 }
 .bar {
 	// background-color: $primary;
@@ -117,23 +119,30 @@ body {
 }
 
 
-// .left_col {
-//   margin-left: 10%;
-//   margin-right: 2%;
-//   width: 38%;
-// }
+.left_col {
+  // margin-left: 10%;
+  margin-right: 2%;
+  float: left;
+  width: 45%;
+  @media #{$medium-and-down} {
+    width: 100%
+  }
+}
 
-// .right_col {
-//   margin-left: 2%;
-//   margin-right: 10%;
-//   width: 38%;
-// }
+.right_col {
+  margin-left: 2%;
+  // margin-right: 10%;
+  clear: right;
+  float: right;
+  width: 45%;
+}
 
 .staff_frame {
   background-image: $base-texture;
   border-radius: 10px;
   margin: 1% 10%;
   padding: 10px 30px 20px 20px;
+  min-height: 310px;
   // padding-bottom: 20px;
 
 }
@@ -163,11 +172,11 @@ body {
   border-radius: 10px;
 }
 
-  .musicology {
-    // padding: 20px;
-    margin: 1% 10%;
-  }
+.musicology {
+  margin: 1% 10%;
+}
 
+// }
 
 .film_card {
   border: 1pt solid red;
@@ -188,7 +197,12 @@ body {
 
 .map {
   float: right;
-  padding: 20px 0 20px 20px;
+  // padding: 20px 0 20px 20px;
+    @media #{$medium-and-down} {
+    float: none;
+    // clear: both;
+  }
+
 }
 
 
@@ -213,4 +227,8 @@ body {
 
 .form {
   padding: 2% 5%;
+}
+
+.header {
+  background-color: $white;
 }

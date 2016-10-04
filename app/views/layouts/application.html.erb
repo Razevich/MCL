@@ -22,7 +22,7 @@
             <span class="trig"></span>
           </div>
           <nav id="nav-main">
-            <ul>
+            <ul class="right">
               <li class="nav"><%= active_link_to '<span class="fa fa-home"></span> Home'.html_safe, home_index_path %></li>
               <!-- <li class="nav"><%= active_link_to "Services", home_services_path %></li> -->
               <li class="nav"><%= active_link_to "Clients", clients_path %></li>
@@ -39,10 +39,13 @@
 <%= yield %>
 <footer>
 	  <ul>
-    <% if @admin %>
-      <a id="login-form" class="modal waves-effect waves-light admin-btn modal-trigger right" href="/logout"><span class="fa fa-unlock"></span></a>
+    <% if current_admin %>
 
-      <li><%= link_to "Sign out", logout_path, method: "delete" %></li>
+      <%= link_to logout_path, :class => "admin-btn right", method: :delete do %>
+        <span class="fa fa-unlock"></span>
+        <!-- new_film_path, :class => "admin-btn valign" -->
+      <% end %>
+
     <% else %>
       <li><a class="waves-effect waves-light modal-trigger admin-btn right" href="/login"><span class="fa fa-lock"></span></a></li>
     <% end %>

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root "home#index"
   get 'home/services'
 
+  get "root/index"
+
   get "projects", to: "projects#index"
 
   resources :clients

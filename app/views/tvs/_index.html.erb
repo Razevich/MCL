@@ -17,7 +17,7 @@
         </div>
         
         <div class="admin_box">
-          <% if !@admin %>
+          <% if current_admin %>
             <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_tv_path(tv) %> | 
             <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, tv, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
@@ -28,7 +28,7 @@
   </div>
 
 <div class="admin_box">
-  <% if !@admin %>
+  <% if current_admin %>
     <%= link_to '<span class="fa fa-plus"></span> New TV Show'.html_safe, new_tv_path, :class => "btn valign" %>
   <% end %>
 </div>

@@ -20,7 +20,7 @@ class ClientsController < ApplicationController
     def create
       @client = Client.new(client_params)
       if @client.save
-        redirect_to clients_path
+        redirect_to clients_path, notice: 'Client was successfully created.'
       else
         render "new"
       end
@@ -35,7 +35,7 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update(client_params)
-        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+        format.html { redirect_to clients_url, notice: 'Client was successfully updated.' }
         format.json { render :show, status: :ok, location: @client }
       else
         format.html { render :edit }
