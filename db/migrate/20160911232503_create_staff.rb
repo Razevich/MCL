@@ -8,3 +8,4 @@ class CreateStaff < ActiveRecord::Migration
     end
   end
 end
+

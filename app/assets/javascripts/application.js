@@ -16,4 +16,4 @@
 //= require_tree .
 
 
-//= require "nav2.js"
+//= require "nav.js"

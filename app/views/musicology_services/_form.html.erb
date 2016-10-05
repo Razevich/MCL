@@ -1,0 +1,46 @@
+<%= form_for(@musicology_service) do |f| %>
+  <% if @musicology_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@musicology_service.errors.count, "error") %> prohibited this musicology_service from being saved:</h2>
+
+      <ul>
+      <% @musicology_service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="modal_box">
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description,  class: "materialize-textarea" %>
+    </div>
+    <div class="field">
+      <%= f.label :bullets %><br>
+      <%= f.text_area :bullets,  class: "materialize-textarea" %>
+    </div>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :bio %><br>
+      <%= f.text_area :bio,  class: "materialize-textarea" %>
+    </div>
+    <div class="field">
+      <%= f.label :img_url %><br>
+      <%= f.text_field :img_url %>
+    </div>
+    <div class="actions center">
+      <%= f.submit "Save", class: "btn" %> or  
+        <%= link_to "Cancel", musicology_services_url, class: "btn" %></div>
+    </div>
+  </div>
+<% end %>
+
+  

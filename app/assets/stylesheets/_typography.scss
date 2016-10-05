@@ -62,6 +62,9 @@ p {
   padding-bottom: 10px;
   orphans: 0;
   text-align: justify;
+  @media #{$medium-and-down} {
+    text-align: left;
+  }
 }
 
 .divider {
@@ -159,7 +162,7 @@ span.email {
   line-height: 130%;
   font-size: 14pt;
   padding-bottom: 10px;
-  margin-left: 20%;
+  margin: 0 20%;
   orphans: 0;
   li {
     padding-bottom: 10px;
