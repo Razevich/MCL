@@ -14,7 +14,7 @@
 
 <div class="admin_box">
   <%= link_to '<span class="fa fa-arrow-left"></span> Back'.html_safe, projects_path %>
-  <% if @admin %>
+  <% if current_admin %>
      | <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_marketing_path(@marketing) %>
   <% end %>
 </div>
