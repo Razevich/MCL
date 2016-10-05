@@ -1,73 +1,55 @@
 class ClientsController < ApplicationController
     before_action :set_client, only: [:show, :edit, :update, :destroy]
 
-    def index
-      @clients = Client.all
+  def index
+    @clients = Client.order(id: :asc).all
+  end
+
+  def show
+  end
+
+  def new
+    @client = Client.new
+  end
+
+
+  def edit
+    # @client = Client.find_by(name: params[:name])
+  end
+
+  def create
+    @client = Client.new(client_params)
+    if @client.save
+      redirect_to clients_path, notice: 'Client was successfully created.'
+    else
+      render "new"
     end
+  end
 
-    def show
-    end
-
-    def new
-      @client = Client.new
-    end
-
-
-    def edit
-      # @client = Client.find_by(name: params[:name])
-    end
-
-    def create
-      @client = Client.new(client_params)
-      if @client.save
-        redirect_to clients_path, notice: 'Client was successfully created.'
-      else
-        render "new"
-      end
-    end
-
-    # def update
-    #   @client = Client.find_by(name: params[:name])
-    #   @client.upgrade(client_params)
-
-    #   redirect_to clients_path
-    # end
   def update
     respond_to do |format|
       if @client.update(client_params)
         format.html { redirect_to clients_url, notice: 'Client was successfully updated.' }
-        format.json { render :show, status: :ok, location: @client }
       else
         format.html { render :edit }
-        format.json { render json: @client.errors, status: :unprocessable_entity }
       end
     end
   end
 
-
-    def destroy
-      @client.destroy
-      respond_to do |format|
-        format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
-        format.json { head :no_content }
-      end
-      @client = Client.find_by(name: params[:name])
+  def destroy
+    @client.destroy
+    respond_to do |format|
+      format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
     end
+    @client = Client.find_by(name: params[:name])
+  end
 
-    #   def destroy
-    #   @client = Client.find_by(name: params[:name])
-    #   @client.destroy
+private
+  def set_client
+    @client = Client.find(params[:id])
+  end
 
-    #   redirect_to client_path
-    # end
-
-    private
-
-    def set_client
-      @client = Client.find(params[:id])
-    end
-
-    def client_params
-      params.require(:client).permit(:name, :img_url, :description)
-    end
+  def client_params
+    params.require(:client).permit(:name, :img_url, :description)
+  end
 end

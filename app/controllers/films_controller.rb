@@ -3,7 +3,8 @@ class FilmsController < ApplicationController
 
   def index
     # @films = Film.all
-    @films = Film.first
+    # Films.order("id DESC").all
+    # @films = Film.first
   end
 
   def show
@@ -16,14 +17,6 @@ class FilmsController < ApplicationController
   def edit
   end
 
-  # def create
-  #   @film = Film.new(film_params)
-  #   if @film.save
-  #     redirect_to film_path
-  #   else
-  #     render "new"
-  #   end
-  # end
   def create
     @film = Film.new(film_params)
 
