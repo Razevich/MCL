@@ -18,9 +18,7 @@
         <nav>
           <%= link_to image_tag("MCL-Logo-Orange-RGB.png", :class => 'brand-logo'), {action: :'index', :controller => 'home'} %>
 
-          <div id="nav-trigger">
-            <span class="trig"></span>
-          </div>
+          <div id="nav-trigger"><span class="trig"></span></div>
           <nav id="nav-main">
             <ul class="right">
               <li class="nav"><%= active_link_to '<span class="fa fa-home"></span> Home'.html_safe, home_index_path %></li>

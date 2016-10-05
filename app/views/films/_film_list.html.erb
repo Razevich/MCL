@@ -4,6 +4,7 @@
 		<% films.each do |film| %>
       <div class="col s12 m6 l3 center">
       <div class="poster_index">
+      <%= film.order(:sort_by => "id")%>
         <%= link_to image_tag(film.img_url, :class => "poster_thumb"), film %>
       </div>
     	<div class="info">
