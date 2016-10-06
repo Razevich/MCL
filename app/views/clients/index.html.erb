@@ -25,7 +25,7 @@
 
   <div class="admin_box">
 	  <% if current_admin %>
-			<%= link_to 'New Client', new_client_path, :class => "waves-effect waves-light btn" %>
+			<%= link_to '<span class="fa fa-plus"></span> New Client'.html_safe, new_client_path, :class => "waves-effect waves-light btn" %>
 	  <% end %>
   </div>
 </div>

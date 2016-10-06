@@ -13,7 +13,8 @@
 
     <div class="admin_box">
       <% if current_admin %>
-        <%= link_to '<span class="fa fa-edit"></span> Edit MUsicology'.html_safe, edit_musicology_service_path(musicology_service), :class => "btn" %> 
+        <%= link_to '<span class="fa fa-edit"></span> Edit MUsicology'.html_safe, edit_musicology_service_path(musicology_service), :class => "btn" %> or
+        <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, musicology_service, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn" %>
       <% end %>
     </div>
   <% end %>

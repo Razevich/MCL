@@ -32,9 +32,8 @@
       <%= f.text_field :img_url %>
     </div>
     <div class="field center">
-      <%= f.label :favorite %><br>
-      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"/>
-      <label for="filled-in-box"><%= f.check_box :favorite %></label>
+      <%= f.check_box :favorite, {:class => "filled-in"} %>
+      <%= f.label :favorite %>
     </div>
     <div class="actions center">
       <%= f.submit "Save", class: "btn" %> or
@@ -42,3 +41,19 @@
     </div>
   </div>
 <% end %>
+
+
+<form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+  </form>
+
+
+

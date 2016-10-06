@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005190950) do
+ActiveRecord::Schema.define(version: 20161006024756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,9 +55,9 @@ ActiveRecord::Schema.define(version: 20161005190950) do
     t.string   "year"
     t.string   "description"
     t.string   "img_url"
-    t.boolean  "favorite"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "favorite",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "marketings", force: :cascade do |t|
@@ -82,13 +82,13 @@ ActiveRecord::Schema.define(version: 20161005190950) do
     t.integer  "film_id"
     t.integer  "tv_id"
     t.integer  "marketing_id"
-    t.integer  "independent_film_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.integer  "indie_film_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "projects", ["film_id"], name: "index_projects_on_film_id", using: :btree
-  add_index "projects", ["independent_film_id"], name: "index_projects_on_independent_film_id", using: :btree
+  add_index "projects", ["indie_film_id"], name: "index_projects_on_indie_film_id", using: :btree
   add_index "projects", ["marketing_id"], name: "index_projects_on_marketing_id", using: :btree
   add_index "projects", ["tv_id"], name: "index_projects_on_tv_id", using: :btree
 
