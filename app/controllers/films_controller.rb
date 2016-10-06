@@ -15,24 +15,14 @@ class FilmsController < ApplicationController
   def edit
   end
 
-  # def create
-  #   @film = Film.new(film_params)
-  #   if @film.save
-  #     redirect_to film_path
-  #   else
-  #     render "new"
-  #   end
-  # end
   def create
     @film = Film.new(film_params)
 
     respond_to do |format|
       if @film.save
         format.html { redirect_to projects_url, notice: 'Film was successfully created.' }
-        # format.json { render :show, status: :created, location: @film }
       else
         format.html { render :new }
-        # format.json { render json: @film.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -40,7 +30,6 @@ class FilmsController < ApplicationController
 
   def update
     # @film = Film.find_by(title: params[:title])
-
     # @film.update(film_params)
     respond_to do |format|
       if @film.update(film_params)
@@ -51,21 +40,14 @@ class FilmsController < ApplicationController
     end
   end
 
-  # def update
-  #   @film= Film.find_by(title: params[:title])
-  #   @film.update(film_params)
 
-  #   redirect_to film_path(@film)
-  # end
-
-    def destroy
-      @film.destroy
-      respond_to do |format|
-        format.html { redirect_to projects_url, notice: 'Film was successfully destroyed.' }
-        format.json { head :no_content }
-      end
-      # @film = Film.find_by(title: params[:title])
+  def destroy
+    @film.destroy
+    respond_to do |format|
+      format.html { redirect_to projects_url, notice: 'Film was successfully destroyed.' }
     end
+    # @film = Film.find_by(title: params[:title])
+  end
 
   # def destroy
   #   @film= Film.find_by(title: params[:title])
@@ -76,12 +58,12 @@ class FilmsController < ApplicationController
 
   private
 
-    def set_film
-      @film = Film.find(params[:id])
-    end
+  def set_film
+    @film = Film.find(params[:id])
+  end
 
   def film_params
-    params.require(:film).permit(:title, :year, :description, :img_url, :favorite)
+    params.require(:film).permit(:title, :year, :distributor, :description, :img_url, :favorite)
   end
 
 end

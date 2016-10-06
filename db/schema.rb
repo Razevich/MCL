@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001151547) do
+ActiveRecord::Schema.define(version: 20161006024756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,24 +41,12 @@ ActiveRecord::Schema.define(version: 20161001151547) do
   end
 
   create_table "films", force: :cascade do |t|
-    t.text     "title"
-    t.integer  "project_id"
-    t.integer  "year"
-    t.text     "description"
-    t.text     "img_url"
-    t.boolean  "favorite",    default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-  end
-
-  create_table "independednt_films", force: :cascade do |t|
-    t.text     "title"
-    t.integer  "year"
-    t.text     "description"
-    t.text     "img_url"
-    t.boolean  "favorite",    default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string  "title"
+    t.string  "distributor"
+    t.string  "year"
+    t.string  "description"
+    t.string  "img_url"
+    t.boolean "favorite",    default: false
   end
 
   create_table "indie_films", force: :cascade do |t|
@@ -67,39 +55,40 @@ ActiveRecord::Schema.define(version: 20161001151547) do
     t.string   "year"
     t.string   "description"
     t.string   "img_url"
-    t.boolean  "favorite"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "marketings", force: :cascade do |t|
-    t.integer  "project_id"
-    t.integer  "year"
-    t.text     "title"
-    t.text     "description"
-    t.text     "img_url"
     t.boolean  "favorite",    default: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
 
+  create_table "marketings", force: :cascade do |t|
+    t.string  "title"
+    t.string  "year"
+    t.string  "distributor"
+    t.string  "description"
+    t.string  "img_url"
+    t.boolean "favorite",    default: false
+  end
+
   create_table "musicology_services", force: :cascade do |t|
-    t.text     "bio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "description"
+    t.text "name"
+    t.text "title"
+    t.text "bio"
+    t.text "img_url"
+    t.text "bullets"
   end
 
   create_table "projects", force: :cascade do |t|
     t.integer  "film_id"
     t.integer  "tv_id"
     t.integer  "marketing_id"
-    t.integer  "independent_film_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.integer  "indie_film_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "projects", ["film_id"], name: "index_projects_on_film_id", using: :btree
-  add_index "projects", ["independent_film_id"], name: "index_projects_on_independent_film_id", using: :btree
+  add_index "projects", ["indie_film_id"], name: "index_projects_on_indie_film_id", using: :btree
   add_index "projects", ["marketing_id"], name: "index_projects_on_marketing_id", using: :btree
   add_index "projects", ["tv_id"], name: "index_projects_on_tv_id", using: :btree
 
@@ -119,18 +108,6 @@ ActiveRecord::Schema.define(version: 20161001151547) do
     t.text "title"
     t.text "bio"
     t.text "img_url"
-  end
-
-  create_table "tv_shows", force: :cascade do |t|
-    t.text     "title"
-    t.integer  "year"
-    t.integer  "season"
-    t.text     "description"
-    t.text     "network"
-    t.text     "img_url"
-    t.boolean  "favorite",    default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
   end
 
   create_table "tvs", force: :cascade do |t|

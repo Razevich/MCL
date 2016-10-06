@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if @admin && @admin.authenticate(params[:session][:password])
       session[:admin_id] = @admin.id
       flash[:notice] = "Logged in as Admin."
-      redirect_to projects_url
+      redirect_to root_url
     else
       flash[:alert] = "Invalid username or password."
      redirect_to '/login'

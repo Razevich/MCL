@@ -140,7 +140,7 @@ body {
 .staff_frame {
   background-image: $base-texture;
   border-radius: 10px;
-  margin: 1% 10%;
+  margin: 1% 5%;
   padding: 10px 30px 20px 20px;
   min-height: 310px;
   // padding-bottom: 20px;
@@ -205,7 +205,6 @@ body {
 
 }
 
-
 .no_margin {
   margin:0px;
 }
@@ -223,6 +222,7 @@ body {
 
 .info {
   // border: 1pt solid gray;
+  overflow: auto;
 }
 
 .form {

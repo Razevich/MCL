@@ -6,7 +6,7 @@ class CreateIndieFilms < ActiveRecord::Migration
       t.string :year
       t.string :description
       t.string :img_url
-      t.boolean :favorite
+      t.boolean :favorite, default: false
 
       t.timestamps null: false
     end

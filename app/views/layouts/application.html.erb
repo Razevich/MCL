@@ -18,9 +18,7 @@
         <nav>
           <%= link_to image_tag("MCL-Logo-Orange-RGB.png", :class => 'brand-logo'), {action: :'index', :controller => 'home'} %>
 
-          <div id="nav-trigger">
-            <span class="trig"></span>
-          </div>
+          <div id="nav-trigger"><span class="trig"></span></div>
           <nav id="nav-main">
             <ul class="right">
               <li class="nav"><%= active_link_to '<span class="fa fa-home"></span> Home'.html_safe, home_index_path %></li>
@@ -37,22 +35,18 @@
   <div class="bar"></div>
 
 <%= yield %>
+
 <footer>
-	  <ul>
-    <% if current_admin %>
-
-      <%= link_to logout_path, :class => "admin-btn right", method: :delete do %>
-        <span class="fa fa-unlock"></span>
-        <!-- new_film_path, :class => "admin-btn valign" -->
-      <% end %>
-
-    <% else %>
-      <li><a class="waves-effect waves-light modal-trigger admin-btn right" href="/login"><span class="fa fa-lock"></span></a></li>
+  <% if current_admin %>
+    <%= link_to logout_path, :class => "admin-btn right", method: :delete do %>
+      <span class="fa fa-unlock"></span>
     <% end %>
-    </ul>
+  <% else %>
+    <a class="waves-effect waves-light modal-trigger admin-btn right" href="/login"><span class="fa fa-lock"></span></a>
+  <% end %>
 </footer>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </body>
 </html>

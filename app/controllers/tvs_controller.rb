@@ -1,7 +1,6 @@
 class TvsController < ApplicationController
   before_action :set_tv, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @tvs = Tv.all
   end
@@ -9,15 +8,12 @@ class TvsController < ApplicationController
   def show
   end
 
-
   def new
     @tv = Tv.new
   end
 
-
   def edit
   end
-
 
   def create
     @tv = Tv.new(tv_params)

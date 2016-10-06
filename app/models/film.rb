@@ -1,7 +1,7 @@
 class Film < ActiveRecord::Base
   belongs_to :project
 
-  after_save :check_for_and_create_favorite
+  # after_save :check_for_and_create_favorite
 
   def change_favorite
     self.favorite = false if self.favorite = true
@@ -19,7 +19,7 @@ class Film < ActiveRecord::Base
                                    year: self.year,
                             description: self.description,
                                 img_url: self.img_url)
-      favorite.destroy
+      # favorite.destroy
     elsif
       self.favorite == true && self.favorite_changed? == false
       favorite = Favorite.find_by(title: self.title)
@@ -30,5 +30,4 @@ class Film < ActiveRecord::Base
                     img_url: self.img_url)
     end
   end
-
 end

@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.references :film, index: true
       t.references :tv, index: true
       t.references :marketing, index: true
-      t.references :independent_film, index: true
+      t.references :indie_film, index: true
 
       t.timestamps null: false
     end

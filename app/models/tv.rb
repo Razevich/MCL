@@ -1,7 +1,7 @@
 class Tv < ActiveRecord::Base
   belongs_to :project
 
-  after_save :check_for_and_create_favorite
+  # after_save :check_for_and_create_favorite
 
   def change_favorite
     self.favorite = false if self.favorite = true
