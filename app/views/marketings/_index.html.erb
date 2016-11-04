@@ -1,4 +1,4 @@
-<h1>Marketing Ads</h1>
+<h1>Marketing</h1>
   <div class="container project_frame">
     <div class="row valign">
       <% @marketings.each do |marketing| %>
@@ -6,21 +6,21 @@
         <div class="poster_index">
           <%= link_to image_tag(marketing.img_url, :class => "poster_thumb"), marketing %>
         </div>
-        <div class="info"> 
+        <div class="info">
           <h5>
           <% if marketing.favorite == true %>
-            <span class="fa fa-star secondary"></span> 
+            <span class="fa fa-star secondary"></span>
           <% end %>
-          <%= marketing.title %></h5> 
+          <%= marketing.title %></h5>
 
         </div>
-        
+
         <div class="admin_box">
           <% if current_admin %>
-            <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_marketing_path(marketing) %> | 
+            <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_marketing_path(marketing) %> |
             <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, marketing, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
-        </div>  
+        </div>
         </div>
       <% end %>
     </div>

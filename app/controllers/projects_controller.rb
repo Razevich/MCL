@@ -4,10 +4,10 @@ class ProjectsController < ApplicationController
   def index
     # @projects = Project.all
     # @user.files.order(id: :desc)
-    @films = Film.order(id: :desc).all
-    @tvs = Tv.order(id: :desc).all
-    @marketings = Marketing.order(id: :desc).all
-    @indie_films = IndieFilm.order(id: :desc).all
+    @films = Film.order(year: :desc).all
+    @tvs = Tv.order(year: :desc).all
+    @marketings = Marketing.order(year: :desc).all
+    @indie_films = IndieFilm.order(year: :desc).all
   end
 
   def show
