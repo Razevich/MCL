@@ -12,6 +12,11 @@
           <span class="fa fa-star secondary"></span>
         <% end %>
         <%= film.title %></h5>
+
+        <h6>
+            <span class="network_name_index"> <%= film.distributor %></span>
+        </h6>
+
         <h6>
         <% if film.year == nil %>
         <%= "Coming Soon" %>
@@ -37,5 +42,3 @@
     <%= link_to'<span class="fa fa-plus"></span> New Film'.html_safe, new_film_path, :class => "btn valign" %>
   <% end %>
 </div>
-
-

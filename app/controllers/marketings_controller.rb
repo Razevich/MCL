@@ -58,4 +58,3 @@ class MarketingsController < ApplicationController
       params.require(:marketing).permit(:year, :title, :distributor, :season, :description, :img_url, :favorite)
     end
 end
-
