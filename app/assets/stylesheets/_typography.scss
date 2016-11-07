@@ -40,7 +40,7 @@ h1 { font-size: $h1-fontsize; line-height: 110%; margin: 0 0 ($h1-fontsize / 4) 
 h1.staff { font-size: $h1-fontsize; line-height: 110%; margin: 0 0 ($h1-fontsize / 4) 0; color: $primary; text-align: left; margin-top: 20px;}
 
 h2 { font-size: $h2-fontsize; line-height: 130%; margin: ($h2-fontsize / 4) 0 ($h2-fontsize / 4) 0; color: lighten($black, 50%);   text-align: center;}
-h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 1) 0 ($h3-fontsize / 5) 0; color: $primary; font-weight: 700; 
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 1) 0 ($h3-fontsize / 5) 0; color: $primary; font-weight: 700;
   // padding-top: 10px;
 }
 h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0; color: lighten($black, 50%);}
@@ -86,16 +86,16 @@ span.client_name {
   font-size: $h1-fontsize;
   padding: 10px 10px 10px 0;
   color: lighten($black, 50%);
-  text-align: center; 
+  text-align: center;
   font-weight: 200;
 }
 
 span.network_name {
-  font-size: $h1-fontsize;
+  font-size: $h7-fontsize;
   padding: 10px 10px 10px 0;
   // color: lighten($primary, 50%);
   color: $secondary;
-  text-align: center; 
+  text-align: center;
   font-weight: 100;
 }
 
@@ -104,7 +104,7 @@ span.network_name_index {
   padding: 10px 10px 10px 0;
   // color: lighten($primary, 50%);
   color: $secondary;
-  text-align: center; 
+  text-align: center;
   font-weight: 100;
 }
 
@@ -120,7 +120,7 @@ span.year {
   font-size: $h2-fontsize;
   padding: 10px 10px 20px 0;
   color: lighten($black, 70%);
-  // text-align: center;  
+  // text-align: center;
   // float: right;
 }
 
@@ -133,7 +133,7 @@ span.email {
   font-size: $h3-fontsize;
   // padding: 10px 10px 0 0;
   // color: lighten($black, 50%);
-  text-align: center; 
+  text-align: center;
   font-weight: 300;
 }
 
