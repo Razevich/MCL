@@ -13,6 +13,13 @@
           <% end %>
           <%= marketing.title %></h5>
 
+          <h6>
+            <% if marketing.year == nil %>
+              <%= "Coming Soon" %>
+            <% end %>
+
+            <%= marketing.year %>
+          </h6>
         </div>
 
         <div class="admin_box">

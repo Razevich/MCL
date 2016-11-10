@@ -6,22 +6,31 @@
         <div class="poster_index">
           <%= link_to image_tag(tv.img_url, :class => "poster_thumb"), tv %>
         </div>
-        <div class="info"> 
+        <div class="info">
           <h5>
           <% if tv.favorite == true %>
-            <span class="fa fa-star secondary"></span> 
+            <span class="fa fa-star secondary"></span>
           <% end %>
-          <%= tv.title %></h5> 
+          <%= tv.title %></h5>
           <h6>
-          <span class="network_name_index"> <%= tv.network %></span></h6> 
+            <% if tv.year == nil %>
+              <%= "Coming Soon" %>
+            <% end %>
+
+            <%= tv.year %>
+          </h6>
+          <!-- <h6>
+
+
+          <span class="network_name_index"> <%= tv.network %></span></h6> -->
         </div>
-        
+
         <div class="admin_box">
           <% if current_admin %>
-            <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_tv_path(tv) %> | 
+            <%= link_to '<span class="fa fa-edit"></span> Edit'.html_safe, edit_tv_path(tv) %> |
             <%= link_to '<span class="fa fa-remove"></span> Remove'.html_safe, tv, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
-        </div>  
+        </div>
         </div>
       <% end %>
     </div>

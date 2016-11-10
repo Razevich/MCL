@@ -20,12 +20,16 @@
       <%= f.label :img_url %><br>
       <%= f.text_field :img_url %>
     </div>
+    <div class="field">
+      <%= f.label :network %><br>
+      <%= f.text_field :network %>
+    </div>
     <div class="field center">
       <%= f.check_box :favorite, {:class => "filled-in"} %>
       <%= f.label :favorite %>
     </div>
     <div class="actions center">
-      <%= f.submit "Save", class: "btn" %>  or  
+      <%= f.submit "Save", class: "btn" %>  or
       <%= link_to "Cancel", projects_url, class: "btn" %></div>
     </div>
   </div>

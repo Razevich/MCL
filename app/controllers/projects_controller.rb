@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
     # @projects = Project.all
     # @user.files.order(id: :desc)
     @films = Film.order(year: :desc, id: :desc).all
-    @tvs = Tv.order(year: :desc, id: :desc).all
+    @tvs = Tv.order(id: :desc).all
     @marketings = Marketing.order(year: :desc, id: :desc).all
     @indie_films = IndieFilm.order(year: :desc, id: :desc).all
   end
