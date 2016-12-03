@@ -7,11 +7,13 @@
           <%= link_to image_tag(tv.img_url, :class => "poster_thumb"), tv %>
         </div>
         <div class="info">
+          <div class="title_box">
           <h5>
           <% if tv.favorite == true %>
             <span class="fa fa-star secondary"></span>
           <% end %>
-          <%= tv.title %></h5>
+          <%= truncate(tv.title, :length => 50, :separator => ' ') %>
+          </h5>
           <h6>
             <% if tv.year == nil %>
               <%= "Coming Soon" %>
@@ -19,10 +21,8 @@
 
             <%= tv.year %>
           </h6>
-          <!-- <h6>
-
-
-          <span class="network_name_index"> <%= tv.network %></span></h6> -->
+          <!-- <h6> <span class="network_name_index"> <%= tv.network %></span></h6> -->
+        </div>
         </div>
 
         <div class="admin_box">
