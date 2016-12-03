@@ -11,7 +11,8 @@
           <% if tv.favorite == true %>
             <span class="fa fa-star secondary"></span>
           <% end %>
-          <%= tv.title %></h5>
+          <%= truncate(tv.title, :length => 50, :separator => ' ') %>
+          </h5>
           <h6>
             <% if tv.year == nil %>
               <%= "Coming Soon" %>

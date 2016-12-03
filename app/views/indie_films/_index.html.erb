@@ -11,7 +11,8 @@
           <% if indie_film.favorite == true %>
             <span class="fa fa-star secondary"></span> 
           <% end %>
-          <%= indie_film.title %></h5> 
+          <%= truncate(indie_film.title, :length => 50, :separator => ' ') %>
+          </h5> 
           <h6><%= indie_film.year %></h6> 
         </div>
         

@@ -11,7 +11,8 @@
           <% if marketing.favorite == true %>
             <span class="fa fa-star secondary"></span>
           <% end %>
-          <%= marketing.title %></h5>
+          <%= truncate(marketing.title, :length => 50, :separator => ' ') %>
+          </h5>
 
           <h6>
             <% if marketing.year == nil %>
