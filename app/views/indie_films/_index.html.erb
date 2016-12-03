@@ -7,6 +7,7 @@
           <%= link_to image_tag(indie_film.img_url, :class => "poster_thumb"), indie_film %>
         </div>
         <div class="info"> 
+          <div class="title_box">
           <h5>
           <% if indie_film.favorite == true %>
             <span class="fa fa-star secondary"></span> 
@@ -14,6 +15,7 @@
           <%= truncate(indie_film.title, :length => 50, :separator => ' ') %>
           </h5> 
           <h6><%= indie_film.year %></h6> 
+        </div>
         </div>
         
         <div class="admin_box">
