@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :tvs
   resources :marketings
   resources :indie_films
-  resources :musicology_services
+  #resources :musicology_services
   resources :staffs
   resources :contacts, only: [:index]
 
